@@ -2,3 +2,4 @@
 
 # Raider Robotics Documentation Website
 
+View this website by visiting [docs.msoevex.com](http://docs.msoevex.com).
