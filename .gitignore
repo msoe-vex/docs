@@ -3,4 +3,6 @@
 
 # Sphinx build artifacts
 build/
-
+**/.history/
+**/.vscode/
+**/_build/
