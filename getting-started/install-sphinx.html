@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Organization Management &mdash; ChangeUp  documentation</title>
+  <title>Install Sphinx &mdash; ChangeUp  documentation</title>
   
 
   
@@ -39,9 +39,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Project Management" href="project-management.html" />
-    <link rel="prev" title="Git Setup" href="../getting-started/setup-git.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,12 +84,9 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/getting-started.html">Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Organization Management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="project-management.html">Project Management</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../our-team/our-team.html">Organization Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../design/design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electronics/electronics.html">Electronics</a></li>
@@ -144,13 +139,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Organization Management</li>
+      <li>Install Sphinx</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/our-team/our-team.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/getting-started/install-sphinx.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,12 +158,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="organization-management">
-<h1>Organization Management<a class="headerlink" href="#organization-management" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="project-management.html">Project Management</a></li>
-</ul>
+  <section id="install-sphinx">
+<h1>Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>First, install Python 3 and the pip Python package managers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3 python3-pip python3-venv
+pip install -U sphinx
+</pre></div>
+</div>
+<p>If you haven’t already, clone the docs repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:msoe-vex/docs.git
+</pre></div>
+</div>
+<p>Move into the docs repository directory and create a Python virtual environment. It is always a good idea to create separate Python virtual environments for each project you work on. Python virtual environments can save you a lot of headache with package incompatibilities in the long run.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+python3 -m venv venv
+</pre></div>
+</div>
+<p>Next, we source our newly created virtual environment</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important that you remember to source the virtual enviroment each time you open a terminal session and want to interact with the docs repo.</p>
+<p>If you forget, you will get errors about packages not being available.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<p>Your bash prompt should now be prefixed with <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> to show that you are in the Python virtual environment.</p>
+<p>We now need to install the required Python packages to build the docs repo. We do this by telling pip to install all the packages in the requirements.txt file in the root of the repo.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+<p>Try building the docs repo by running the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+<p>If the installation was successful, the sphinx docs html pages should now build! View the locally built docs by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>firefox build/html/index.html <span class="p">&amp;</span>
+</pre></div>
 </div>
 </section>
 
@@ -177,10 +203,6 @@
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="project-management.html" class="btn btn-neutral float-right" title="Project Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../getting-started/setup-git.html" class="btn btn-neutral float-left" title="Git Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
