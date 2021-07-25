@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Git Setup &mdash; ChangeUp  documentation</title>
@@ -14,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -30,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -171,9 +172,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="git-setup">
+  <div class="section" id="git-setup">
 <h1>Git Setup<a class="headerlink" href="#git-setup" title="Permalink to this headline">¶</a></h1>
-<section id="generate-and-add-an-ssh-key-to-github">
+<div class="section" id="generate-and-add-an-ssh-key-to-github">
 <h2>Generate and Add an SSH Key to Github<a class="headerlink" href="#generate-and-add-an-ssh-key-to-github" title="Permalink to this headline">¶</a></h2>
 <p>Generate a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Feel free to enter a password if desired, but personally I press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> twice to proceed with no password (much more convenient).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
@@ -193,11 +194,11 @@
 </div>
 <p>In your browser, go to the <a class="reference external" href="https://github.com/settings/ssh/new">Github new SSH key page</a></p>
 <p>Copy the output of the above command and paste it in the key box. Enter an appropriate name and add the key to your account.</p>
-</section>
-<section id="configure-git-email-and-name">
+</div>
+<div class="section" id="configure-git-email-and-name">
 <h2>Configure Git Email and name<a class="headerlink" href="#configure-git-email-and-name" title="Permalink to this headline">¶</a></h2>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
