@@ -30,7 +30,9 @@ author = 'MSOE Robotics - Raider Robotics VEXU'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
-	'myst_parser'
+	'myst_parser',
+    'autosectionlabel',
+    'githubpages'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

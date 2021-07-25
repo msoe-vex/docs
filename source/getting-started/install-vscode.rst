@@ -1,5 +1,28 @@
-Install Visual Studio Code
+=============================
+Installing Visual Studio Code
+=============================
+
+Developing in the Linux VM
 ==========================
+
+This first method of development is the recommended approach for developing using Visual Studio Code.
+
+Download and install the Visual Studio Code snap package
+
+.. code:: bash
+
+    sudo snap install --clasic code
+
+And that's all there is to it! Be sure to see the recommended extensions section of this guide as you will likely want to install some of those.
+
+Developing in Windows
+=====================
+
+The second method of developing using Visual Studio Code is using the Remote Development extensions. Using the remote development extensions allows you to work inside the Linux VM through an SSH tunnel between your Windows host and Linux VM.
+
+Long story short, you can run Visual Studio Code on Windows but actually be working inside the Linux VM.
+
+This setup can be faster and have less latency than working directly in the Linux VM when writing code. However, you will still need to open the Linux VM window to work with any GUIs (unless you setup X11 forwarding).
 
 .. warning:: 
 
@@ -55,3 +78,16 @@ If everything was set up correctly, you should *not* have to enter your Linux pa
 
 
 .. _Visual Studio Code Download page: https://code.visualstudio.com/download
+
+Recommended Extensions
+======================
+
+Below is a list of some of the packages we recommend installing in Visual Studio Code. 
+These extensions can be installed by opening up the extensions tab (keyboard shortcut Ctrl+Shift+X) searching for the package, and clicking install.
+
+General Extensions
+
+* C/C++
+* Pylance
+* Python
+* Visual Studio IntelliCode
