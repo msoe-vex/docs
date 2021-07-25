@@ -1,0 +1,40 @@
+Git Setup
+=========
+
+Generate and Add an SSH Key to Github
+-------------------------------------
+
+Generate a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing ``Enter``. Feel free to enter a password if desired, but personally I press ``Enter`` twice to proceed with no password (much more convenient).
+
+.. code:: bash
+
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Start the ssh-agent in the background
+
+.. code:: bash
+
+    eval "$(ssh-agent -s)"
+
+Add your ssh key to the ssh-agent
+
+.. code:: bash
+
+    ssh-add ~/.ssh/id_ed25519
+
+The next step is to add your public ssh key to your github account. Read your public key by running the following command
+
+.. code:: bash
+
+    more ~/.ssh/id_ed25519.pub
+
+In your browser, go to the `Github new SSH key page`_
+
+Copy the output of the above command and paste it in the key box. Enter an appropriate name and add the key to your account.
+    
+.. _Github new SSH key page: https://github.com/settings/ssh/new
+
+Configure Git Email and name
+----------------------------
+
+
