@@ -6,3 +6,4 @@ build/
 **/.history/
 **/.vscode/
 **/_build/
+**/venv/
