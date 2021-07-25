@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'ChangeUp'
+project = 'MSOE VEXU Docs'
 copyright = '2021, MSOE Robotics - Raider Robotics VEXU' 
 author = 'MSOE Robotics - Raider Robotics VEXU'
 
@@ -31,8 +31,8 @@ author = 'MSOE Robotics - Raider Robotics VEXU'
 extensions = [
     'sphinx_rtd_theme',
 	'myst_parser',
-    'autosectionlabel',
-    'githubpages'
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.githubpages'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
