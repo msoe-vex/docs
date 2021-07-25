@@ -37,4 +37,10 @@ Copy the output of the above command and paste it in the key box. Enter an appro
 Configure Git Email and name
 ----------------------------
 
+To create commits, git must know what your name and email is. To tell git who we are, run the following commands (obviously replace with your name / email).
+
+.. code:: bash
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
 
