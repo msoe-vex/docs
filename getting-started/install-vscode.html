@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Install Visual Studio Code &mdash; ChangeUp  documentation</title>
+  <title>Installing Visual Studio Code &mdash; MSOE VEXU Docs  documentation</title>
   
 
   
@@ -56,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> ChangeUp
+            <a href="../index.html" class="icon icon-home"> MSOE VEXU Docs
           
 
           
@@ -90,10 +90,15 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="getting-started.html">Getting Started</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install-linux.html">Install Linux</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Install Visual Studio Code</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#downloading-visual-studio-code">Downloading Visual Studio Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-up-ssh-keys">Setting up SSH Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#visual-studio-code-setup">Visual Studio Code Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installing Visual Studio Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#developing-in-the-linux-vm">Developing in the Linux VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developing-in-windows">Developing in Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#downloading-visual-studio-code">Downloading Visual Studio Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-ssh-keys">Setting up SSH Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visual-studio-code-setup">Visual Studio Code Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-extensions">Recommended Extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="install-docker.html">Install Docker</a></li>
@@ -106,6 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../design/design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electronics/electronics.html">Electronics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../media/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seasons/seasons.html">Seasons</a></li>
 </ul>
 
             
@@ -121,7 +127,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">ChangeUp</a>
+          <a href="../index.html">MSOE VEXU Docs</a>
         
       </nav>
 
@@ -156,7 +162,7 @@
         
           <li><a href="getting-started.html">Getting Started</a> &raquo;</li>
         
-      <li>Install Visual Studio Code</li>
+      <li>Installing Visual Studio Code</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,19 +181,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="install-visual-studio-code">
-<h1>Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="installing-visual-studio-code">
+<h1>Installing Visual Studio Code<a class="headerlink" href="#installing-visual-studio-code" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="developing-in-the-linux-vm">
+<h2>Developing in the Linux VM<a class="headerlink" href="#developing-in-the-linux-vm" title="Permalink to this headline">¶</a></h2>
+<p>This first method of development is the recommended approach for developing using Visual Studio Code.</p>
+<p>Download and install the Visual Studio Code snap package</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo snap install --clasic code
+</pre></div>
+</div>
+<p>And that’s all there is to it! Be sure to see the recommended extensions section of this guide as you will likely want to install some of those.</p>
+</div>
+<div class="section" id="developing-in-windows">
+<h2>Developing in Windows<a class="headerlink" href="#developing-in-windows" title="Permalink to this headline">¶</a></h2>
+<p>The second method of developing using Visual Studio Code is using the Remote Development extensions. Using the remote development extensions allows you to work inside the Linux VM through an SSH tunnel between your Windows host and Linux VM.</p>
+<p>Long story short, you can run Visual Studio Code on Windows but actually be working inside the Linux VM.</p>
+<p>This setup can be faster and have less latency than working directly in the Linux VM when writing code. However, you will still need to open the Linux VM window to work with any GUIs (unless you setup X11 forwarding).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Be sure to pay attention to if commands/actions should be taken on Windows/Linux when following this page</p>
 </div>
 <div class="section" id="downloading-visual-studio-code">
-<h2>Downloading Visual Studio Code<a class="headerlink" href="#downloading-visual-studio-code" title="Permalink to this headline">¶</a></h2>
+<h3>Downloading Visual Studio Code<a class="headerlink" href="#downloading-visual-studio-code" title="Permalink to this headline">¶</a></h3>
 <p>On <strong>Windows</strong>, download and install Visual Studio Code from the <a class="reference external" href="https://code.visualstudio.com/download">Visual Studio Code download page</a>.</p>
 <p>Open up Visual Studio Code. We need to install the Remote Development extension pack, which we can do by opening up the extensions tab (keyboard shortcut Ctrl+Shift+X).</p>
 </div>
 <div class="section" id="setting-up-ssh-keys">
-<h2>Setting up SSH Keys<a class="headerlink" href="#setting-up-ssh-keys" title="Permalink to this headline">¶</a></h2>
+<h3>Setting up SSH Keys<a class="headerlink" href="#setting-up-ssh-keys" title="Permalink to this headline">¶</a></h3>
 <p>Run the following commands in powershell to generate a ssh rsa key and copy it onto your Linux virtual machine. Make sure to replace username with your Ubuntu account username.</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ssh-keygen</span> <span class="n">-t</span> <span class="n">rsa</span> <span class="n">-b</span> <span class="n">4096</span> <span class="o">-f</span> <span class="s2">&quot;$HOME\.ssh\linux_rsa&quot;</span>
 <span class="n">scp</span> <span class="n">-P</span> <span class="n">3022</span> <span class="s2">&quot;$HOME/.ssh/linux_rsa.pub&quot;</span> <span class="n">username</span><span class="nv">@127</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">1</span><span class="p">:~/</span><span class="n">key</span><span class="p">.</span><span class="n">pub</span>
@@ -204,7 +224,7 @@ rm ~/key.pub
 </div>
 </div>
 <div class="section" id="visual-studio-code-setup">
-<h2>Visual Studio Code Setup<a class="headerlink" href="#visual-studio-code-setup" title="Permalink to this headline">¶</a></h2>
+<h3>Visual Studio Code Setup<a class="headerlink" href="#visual-studio-code-setup" title="Permalink to this headline">¶</a></h3>
 <p>Opening Visual Studio Code on <strong>Windows</strong>, we should see a green icon in the lower left hand corner of the screen. Click on that icon and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">SSH</span> <span class="pre">Configuration</span> <span class="pre">File..</span></code>. If prompted, select the path that looks like <code class="docutils literal notranslate"><span class="pre">C:\Users\username\.ssh\config</span></code> and in the file that opens, paste in the following replacing <code class="docutils literal notranslate"><span class="pre">username</span></code> with your linux username.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">lvm</span>
     <span class="n">HostName</span> <span class="mf">127.0.0.1</span>
@@ -215,6 +235,19 @@ rm ~/key.pub
 </div>
 <p>Click on the green icon again, but this time select <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">Host</span></code>, then select <code class="docutils literal notranslate"><span class="pre">lvm</span></code>. If prompted for the remote machine type, select <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p>
 <p>If everything was set up correctly, you should <em>not</em> have to enter your Linux password and should be presented with an empty project screen with a linux command prompt in the terminal view.</p>
+</div>
+</div>
+<div class="section" id="recommended-extensions">
+<h2>Recommended Extensions<a class="headerlink" href="#recommended-extensions" title="Permalink to this headline">¶</a></h2>
+<p>Below is a list of some of the packages we recommend installing in Visual Studio Code.
+These extensions can be installed by opening up the extensions tab (keyboard shortcut Ctrl+Shift+X) searching for the package, and clicking install.</p>
+<p>General Extensions</p>
+<ul class="simple">
+<li><p>C/C++</p></li>
+<li><p>Pylance</p></li>
+<li><p>Python</p></li>
+<li><p>Visual Studio IntelliCode</p></li>
+</ul>
 </div>
 </div>
 
