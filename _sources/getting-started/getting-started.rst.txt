@@ -7,4 +7,4 @@ Getting Started
    install-linux.rst
    install-docker.rst
    setup-git.rst
-   sphinx-setup.rst
+   install-sphinx.rst
