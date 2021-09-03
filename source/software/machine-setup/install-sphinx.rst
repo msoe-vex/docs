@@ -6,7 +6,6 @@ First, install Python 3 and the pip Python package managers
 .. code:: bash
 
     sudo apt install python3 python3-pip python3-venv
-    pip install -U sphinx
 
 If you haven't already, clone the docs repository
 
@@ -32,6 +31,12 @@ Next, we source our newly created virtual environment
 .. code:: bash
 
     source venv/bin/activate
+
+If you are creating this repository in Windows, you can activate the virtual environment with the command below
+
+.. code:: bash
+
+    .\venv\Source\activate.bat
 
 Your bash prompt should now be prefixed with ``(venv)`` to show that you are in the Python virtual environment.
 

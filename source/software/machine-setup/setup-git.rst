@@ -28,13 +28,15 @@ The next step is to add your public ssh key to your github account. Read your pu
 
     more ~/.ssh/id_ed25519.pub
 
-In your browser, go to the `Github new SSH key page`_
+In your browser, go to the |Github new SSH key page|
 
-Copy the output of the above command and paste it in the key box. Enter an appropriate name and add the key to your account.
+Copy the output of the above command (highlight and right click to copy) and paste it in the key box. Enter an appropriate name and add the key to your account.
     
-.. _Github new SSH key page: https://github.com/settings/ssh/new
+.. |Github new SSH key page| raw:: html
 
-Configure Git Email and name
+    <a href="https://github.com/settings/ssh/new" target="_blank">Github new SSH key page</a>
+
+Configure Git Email and Name
 ----------------------------
 
 To create commits, git must know what your name and email is. To tell git who we are, run the following commands (obviously replace with your name / email).
