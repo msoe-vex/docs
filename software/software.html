@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Developer Machine Setup" href="machine-setup.html" />
+    <link rel="next" title="Developer Machine Setup" href="machine-setup/machine-setup.html" />
     <link rel="prev" title="Project Management" href="../our-team/project-management.html" /> 
 </head>
 
@@ -91,15 +91,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../our-team/our-team.html">Organization Management</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="machine-setup.html">Developer Machine Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/machine-setup.html">Developer Machine Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development-process/development-process.html">Development Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development-tools.html">Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software-usage.html">Software Usage</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../design/design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electronics/electronics.html">Electronics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../media/media.html">Media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seasons/seasons.html">Seasons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -171,11 +172,50 @@
 <h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="machine-setup.html">Developer Machine Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-setup/machine-setup.html">Developer Machine Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/install-linux.html">Install Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-linux.html#downloading-ubuntu">Downloading Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-linux.html#installing-virtualbox">Installing VirtualBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-linux.html#setting-up-a-virtual-machine">Setting Up a Virtual Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-linux.html#installing-ubuntu">Installing Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-linux.html#installing-guest-additions">Installing Guest Additions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/install-vscode.html">Installing Visual Studio Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-vscode.html#developing-in-the-linux-vm">Developing in the Linux VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-vscode.html#developing-in-windows">Developing in Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#downloading-visual-studio-code">Downloading Visual Studio Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#setting-up-ssh-keys">Setting up SSH Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#visual-studio-code-setup">Visual Studio Code Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/install-vscode.html#recommended-extensions">Recommended Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/install-docker.html">Install Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/setup-git.html">Git Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/setup-git.html#generate-and-add-an-ssh-key-to-github">Generate and Add an SSH Key to Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine-setup/setup-git.html#configure-git-email-and-name">Configure Git Email and Name</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machine-setup/install-sphinx.html">Install Sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development-process/development-process.html">Development Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development-process/process-overview.html">Process Overview</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development-tools.html">Development Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software-usage.html">Software Usage</a></li>
 </ul>
 </div>
+<p>The software team is responsible for development and maintenance on multiple systems, all managed through our :term: <cite>GitHub</cite> team. The primary systems are outlined below:</p>
+<p><strong>Embedded Robot Code</strong>
+* 2020-2021: (GITHUB LINK HERE)
+* 2021-2022: (GITHUB LINK HERE)</p>
+<p>The embedded robot code controls all of the onboard systems and communication present on our competition robots. This code is primarily written in C/C++ and Python, and is specialized to each robot that our team creates. This code is run both on our :term: <cite>V5 Brain</cite>, as well as our :term: <cite>Compute Co-processor</cite>. Architecture running on our :term: <cite>V5 Brain</cite> are entirely developed in C/C++, whereas the architecture running on our :term: <cite>Compute Co-processor</cite> is Python dominated, with some C/C++ components.</p>
+<p><strong>WebDashboard</strong>
+* (GITHUB LINK HERE)</p>
+<p>The WebDashboard is a web interface that allows for the creation of robot paths that can be run on compatible robots. These paths specify waypoints on the field that a robot should travel to within a sequence, with interpolated points to allow the robot to perform clean movements between the points. This application exports the path as a :term: <cite>Robot Path File</cite> in JSON, which is then saved to the robot on an SD card. The application is currently built in JavaScript, with a Typescript refactor in the works.</p>
 </div>
 
 
@@ -184,7 +224,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="machine-setup.html" class="btn btn-neutral float-right" title="Developer Machine Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="machine-setup/machine-setup.html" class="btn btn-neutral float-right" title="Developer Machine Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../our-team/project-management.html" class="btn btn-neutral float-left" title="Project Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
