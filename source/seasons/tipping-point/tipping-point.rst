@@ -1,5 +1,3 @@
-.. This document outlines the outcome of our 2021-2022 VEX Tipping Point Season
-
 ====================
 Tipping Point Season
 ====================
@@ -14,6 +12,11 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
+- Kevin Gray, Computer Science
+- Nicholas Gorecki, Software Engineering
+- Asher Sprigler, Computer Engineering
+- John Paul Bunn, Computer Science & Computer Engineering
+- Quinten Robley, Computer Science
 
 
 Robot CAD
