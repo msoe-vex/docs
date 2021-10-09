@@ -1,3 +1,5 @@
+.. This document outlines the outcome of our 2021-2022 VEX Tipping Point Season
+
 ====================
 Tipping Point Season
 ====================
