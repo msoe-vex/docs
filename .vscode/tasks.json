@@ -4,9 +4,35 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Install Virtual Environment",
+            "type": "shell",
+            "command": "pip install virtualenv --user",
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Virtual Environment",
+            "type": "shell",
+            "command": "python -m virtualenv docs-venv",
+            "problemMatcher": []
+        },
+        {
+            "label": "Source Virtual Environment",
+            "type": "shell",
+            "command": ".\\docs-venv\\Scripts\\activate.bat",
+            "problemMatcher": []
+        },
+        {
+            "label": "Install Packages",
+            "type": "shell",
+            "command": "echo 'Currently this step is manual, see issues'",
+            //"command": "pip install -r requirements.txt --user",
+            "problemMatcher": []
+        },
+        {
             "label": "Initial Setup",
             "type": "shell",
-            "command": "pip install -r requirements.txt",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Install Virtual Environment", "Create Virtual Environment", "Source Virtual Environment", "Install Packages"],
             "problemMatcher": []
         },
         {
