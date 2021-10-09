@@ -14,6 +14,9 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
+- Asher Sprigler, Computer Engineering
+- John Paul Bunn, Computer Science & Computer Engineering
+- Quinten Robley, Computer Science
 - Alex Kempen, Computer Science
 
 
