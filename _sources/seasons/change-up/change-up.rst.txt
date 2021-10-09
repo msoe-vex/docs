@@ -33,10 +33,13 @@ The following team members made this season possible:
 
 Robot CAD
 =========
-Our robot CAD can be viewed `by clicking here`__.
+Our robot CAD can be found `by clicking here`__.
 
 __ https://cad.onshape.com/documents/befb5ca771514bfa22c10c84/w/242e357c130534f8d8dc4789/e/2298597678d90c85e38b9f3d
 
+Our VEX V5 Onshape CAD Library can be found `by clicking here`__.
+
+__https://cad.onshape.com/documents/2aba28475248f28b019e8672/w/04e64926555ce731d80a7b0b/e/6a5725d258590ebedc8017d4
 
 Robot Code
 ==========
@@ -47,7 +50,7 @@ __ https://github.com/msoe-vex/ChangeUp
 
 Robot Reveal
 ============
-Our robot reveal can be viewed on YouTube `by clicking here`__, or can be viewed below.
+Our robot reveal can be viewed on YouTube `by clicking here`__, or it can be viewed below.
 
 __ https://youtu.be/ZASviTlgvpo
 
@@ -68,3 +71,4 @@ Related Articles and Resources
 `Milwaukee School of Engineering Press Release`__
  
  __ https://www.msoe.edu/about-msoe/news/details/msoe-raider-robotics-named-world-champions/ 
+
