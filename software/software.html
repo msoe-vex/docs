@@ -18,6 +18,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
 
   
   
@@ -94,6 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="machine-setup/machine-setup.html">Developer Machine Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development-process/development-process.html">Development Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development-tools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/repository-setup.html">Repository-Specific Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../design/design.html">Design</a></li>
@@ -185,6 +188,7 @@
 <li class="toctree-l3"><a class="reference internal" href="machine-setup/install-vscode.html#developing-in-the-linux-vm">Developing in the Linux VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine-setup/install-vscode.html#developing-in-windows">Developing in Windows</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#downloading-visual-studio-code">Downloading Visual Studio Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#configuring-the-vm-for-remote-access">Configuring the VM for Remote Access</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#setting-up-ssh-keys">Setting up SSH Keys</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine-setup/install-vscode.html#visual-studio-code-setup">Visual Studio Code Setup</a></li>
 </ul>
@@ -206,16 +210,38 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="development-tools.html">Development Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository-setup/repository-setup.html">Repository-Specific Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/changeup.html">ChangeUp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/container-registry.html">Container Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/docs.html">Documentation Website (docs)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="repository-setup/docs.html#initial-setup">Initial Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/rosserial.html">ROSSerial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/team-website.html">Team Website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository-setup/webdashboard.html">WebDashboard</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>The software team is responsible for development and maintenance on multiple systems, all managed through our :term: <cite>GitHub</cite> team. The primary systems are outlined below:</p>
-<p><strong>Embedded Robot Code</strong>
-* 2020-2021: (GITHUB LINK HERE)
-* 2021-2022: (GITHUB LINK HERE)</p>
-<p>The embedded robot code controls all of the onboard systems and communication present on our competition robots. This code is primarily written in C/C++ and Python, and is specialized to each robot that our team creates. This code is run both on our :term: <cite>V5 Brain</cite>, as well as our :term: <cite>Compute Co-processor</cite>. Architecture running on our :term: <cite>V5 Brain</cite> are entirely developed in C/C++, whereas the architecture running on our :term: <cite>Compute Co-processor</cite> is Python dominated, with some C/C++ components.</p>
-<p><strong>WebDashboard</strong>
-* (GITHUB LINK HERE)</p>
-<p>The WebDashboard is a web interface that allows for the creation of robot paths that can be run on compatible robots. These paths specify waypoints on the field that a robot should travel to within a sequence, with interpolated points to allow the robot to perform clean movements between the points. This application exports the path as a :term: <cite>Robot Path File</cite> in JSON, which is then saved to the robot on an SD card. The application is currently built in JavaScript, with a Typescript refactor in the works.</p>
+<p><strong>Embedded Robot Code</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">2020-2021</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/msoe-vex/ChangeUp">https://github.com/msoe-vex/ChangeUp</a></p>
+</dd>
+<dt class="field-even">2021-2022</dt>
+<dd class="field-even"><p>(Soon to be created)</p>
+</dd>
+</dl>
+<p>The embedded robot code controls all of the onboard systems and communication present on our competition robots. This code is primarily written in C/C++ and Python, and is specialized to each robot that our team creates. This code is run both on our <a class="reference internal" href="../glossary/glossary.html#term-V5-Brain"><span class="xref std std-term">V5 Brain</span></a>, as well as our <a class="reference internal" href="../glossary/glossary.html#term-Compute-Co-processor"><span class="xref std std-term">Compute Co-processor</span></a>. Architecture running on our <a class="reference internal" href="../glossary/glossary.html#term-V5-Brain"><span class="xref std std-term">V5 Brain</span></a> are entirely developed in C/C++, whereas the architecture running on our <a class="reference internal" href="../glossary/glossary.html#term-Compute-Co-processor"><span class="xref std std-term">Compute Co-processor</span></a> is Python dominated, with some C/C++ components.</p>
+<p><strong>WebDashboard</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">GitHub</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/msoe-vex/WebDashboard">https://github.com/msoe-vex/WebDashboard</a></p>
+</dd>
+</dl>
+<p>The WebDashboard is a web interface that allows for the creation of robot paths that can be run on compatible robots. These paths specify waypoints on the field that a robot should travel to within a sequence, with interpolated points to allow the robot to perform clean movements between the points. This application exports the path as a <a class="reference internal" href="../glossary/glossary.html#term-Robot-Path-File"><span class="xref std std-term">Robot Path File</span></a> in JSON, which is then saved to the robot on an SD card. The application is currently built in JavaScript, with a Typescript refactor in the works.</p>
 </div>
 
 

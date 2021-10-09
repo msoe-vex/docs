@@ -16,11 +16,11 @@ The plan that is created should encompass high level features early on, and beco
 
 **Work Intake**
 
-Work Intake refers to the process of how we plan and prioritize work that needs to be done. When we move onto the next project or set of work, it gets pulled into the :term:`Software Backlog`, hosted on GitHub. 
+Work Intake refers to the process of how we plan and prioritize work that needs to be done. When we move onto the next project or set of work, it gets pulled into the Software :term:`Backlog`, hosted on GitHub. 
 
 (TODO image here)
 
-The :term:`Software Backlog` consists of :term:`Issues` (also known as tasks) that outline all of the major features that need to be completed. Each new issue contains key information, including:
+The Software :term:`Backlog` consists of :term:`Issues` (also known as tasks) that outline all of the major features that need to be completed. Each new issue contains key information, including:
 
 - :term:`Issue Description`
 

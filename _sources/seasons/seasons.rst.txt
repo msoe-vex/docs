@@ -5,4 +5,6 @@ Seasons
 
 .. toctree::
 
-    changeup/changeup
+    tower-takeover/tower-takeover
+    change-up/change-up
+    tipping-point/tipping-point

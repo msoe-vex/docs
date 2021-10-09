@@ -18,6 +18,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
 
   
   
@@ -41,7 +43,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Change Up Season" href="../seasons/changeup/changeup.html" /> 
+    <link rel="prev" title="Tipping Point Season" href="../seasons/tipping-point/tipping-point.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -164,12 +166,25 @@
             
   <div class="section" id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
-<dl class="glossary simple">
-<dt id="term-Card-Labels">Card Labels<a class="headerlink" href="#term-Card-Labels" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+<dl class="glossary">
+<dt id="term-Backlog">Backlog<a class="headerlink" href="#term-Backlog" title="Permalink to this term">¶</a></dt><dd><p>The backlog is a list of tasks, or <a class="reference internal" href="#term-Issues"><span class="xref std std-term">Issues</span></a> that we are looking to solve. The backlog stores anything that we plan on working on in the future, from several days out to years out. The primary use of this is to capture what we <em>need</em> to work on, before it is forgotten or lost. Backlogs are often very large, and because of that, a <a class="reference internal" href="#term-Project-Manager-PM"><span class="xref std std-term">Project Manager (PM)</span></a> is responsible for prioritizing the importance of issues. If a PM believes a certain issue needs to be accomplished before the others, it will move to the <strong>top</strong> of the backlog. Likewise, if something isn’t very important, it will move to the <strong>bottom</strong> of the backlog. To fully utilize this prioritization, members should always take tasks from <strong>near the top</strong> of the backlog, as these will always be features that are more urgently needing to be completed.</p>
 </dd>
-<dt id="term-Definition-of-Done">Definition of Done<a class="headerlink" href="#term-Definition-of-Done" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+<dt id="term-Card-Labels">Card Labels<a class="headerlink" href="#term-Card-Labels" title="Permalink to this term">¶</a></dt><dd><p>Card labels are specific “tags” that we assign issues in our backlog, to help us classify them. Tags fall into several main categories, including:</p>
+<ul class="simple">
+<li><p>Point values (rough difficulty assessment - see <a class="reference internal" href="#term-Scrum"><span class="xref std std-term">Scrum</span></a> for more information)</p></li>
+<li><p>Team that the issue falls under (embedded, web, data science, etc.)</p></li>
+<li><p>Type of work (documentation, enhancements, bug fixes, etc.)</p></li>
+<li><p>Other information we want developers to know</p></li>
+</ul>
+<p>This allows us to quickly prioritize and select issues to work on when they are present in our <a class="reference internal" href="#term-Backlog"><span class="xref std std-term">Backlog</span></a>, making it generally easier to use.</p>
+</dd>
+<dt id="term-Compute-Co-processor">Compute Co-processor<a class="headerlink" href="#term-Compute-Co-processor" title="Permalink to this term">¶</a></dt><dd><p>The compute co-processor is a generic term regarding a secondary processor on the robot, which works in parallel to the <a class="reference internal" href="#term-V5-Brain"><span class="xref std std-term">V5 Brain</span></a> that is required. The compute co-processor is generally delegated to more computationally heavy tasks, such as image processing and algorithm processing, allowing us to free up CPU bandwidth for core processes on the V5 Brain. This device is usually either a Raspberry Pi or an NVIDIA Jetson depending on compute load of the robot.</p>
+</dd>
+<dt id="term-Definition-of-Done">Definition of Done<a class="headerlink" href="#term-Definition-of-Done" title="Permalink to this term">¶</a></dt><dd><p>The Definition of Done is a term to reflect the basic standards that need to be met in order for something to be considered “done”. While each specific task may have unique conditions in it’s own Definition of Done, there are often shared conditions between different tasks. For instance, many tasks on our team require the <a class="reference internal" href="#term-Engineering-Notebook"><span class="xref std std-term">Engineering Notebook</span></a> to be updated before something can be declared as “done”. This helps us enforce some basic management that we need done from the team, and provides a strong outline of what we need done in order to progress on an idea. Once all of the criteria in a task’s Definition of Done are complete, the task can formally be declared as completed.</p>
 </dd>
 <dt id="term-Docker">Docker<a class="headerlink" href="#term-Docker" title="Permalink to this term">¶</a></dt><dd><p>Docker is a virtualization platform used to host containers, which are small, isolated application environments that run similarly to running a separate computer. A machine can interact with it’s containers over various HTTP ports, similar to how different computers communicate.</p>
+</dd>
+<dt id="term-Engineering-Notebook">Engineering Notebook<a class="headerlink" href="#term-Engineering-Notebook" title="Permalink to this term">¶</a></dt><dd><p>The Engineering Notebook is a formal deliverable that our team curates during the entire year. As is done in a typical Engineering Notebook, we are required to document all decisions, testing, and results obtained from the season. The purpose of this document is to show how we got to where we are currently; in an ideal world, anyone should be able to <em>retrace our steps to achieve the same results and outcomes</em>. Our team uses <a class="reference internal" href="#term-Overleaf"><span class="xref std std-term">Overleaf</span></a> to manage our notebook, which allows us to write it in <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>.</p>
 </dd>
 <dt id="term-Grooming">Grooming<a class="headerlink" href="#term-Grooming" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
 </dd>
@@ -177,25 +192,36 @@
 </dd>
 <dt id="term-Issue-Description">Issue Description<a class="headerlink" href="#term-Issue-Description" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
 </dd>
-<dt id="term-Issues">Issues<a class="headerlink" href="#term-Issues" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+<dt id="term-Issues">Issues<a class="headerlink" href="#term-Issues" title="Permalink to this term">¶</a></dt><dd><p>Issues are how we document what needs to get done on our various projects. If we have a bug that needs to be fixed, a new feature for a product, documentation to add, or any other changes, we first create an issue to capture <em>what needs to get done</em>. This issue gets entered into it’s respective <a class="reference internal" href="#term-Backlog"><span class="xref std std-term">Backlog</span></a>, where the team will determine how urgently it should be completed, and how it should be completed.</p>
+<p>Issues are synonymous with <em>tasks</em> or <em>Product Backlog Items (PBIs)</em>.</p>
 </dd>
 <dt id="term-Kanban">Kanban<a class="headerlink" href="#term-Kanban" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
 </dd>
-<dt id="term-LaTeX">LaTeX<a class="headerlink" href="#term-LaTeX" title="Permalink to this term">¶</a></dt><dd><p>LaTeX is a flavor of <a class="reference internal" href="#term-TeX"><span class="xref std std-term">TeX</span></a>. LaTeX is commonly used for technical papers and reports, including our Engineering Notebook.</p>
+<dt id="term-KiCAD">KiCAD<a class="headerlink" href="#term-KiCAD" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+</dd>
+<dt id="term-LaTeX">LaTeX<a class="headerlink" href="#term-LaTeX" title="Permalink to this term">¶</a></dt><dd><p>LaTeX is a flavor of <a class="reference internal" href="#term-TeX"><span class="xref std std-term">TeX</span></a>. LaTeX is a compiled documentation language commonly used for technical papers and reports, including our Engineering Notebook.</p>
 </dd>
 <dt id="term-MSOE-Robotics">MSOE Robotics<a class="headerlink" href="#term-MSOE-Robotics" title="Permalink to this term">¶</a></dt><dd><p>MSOE Robotics is the professional organization used to provide STEM Opportunities to students at MSOE, through connections to student orgs, volunteering opportunities in the community, and professional development opportunities with companies and other students.</p>
 </dd>
+<dt id="term-Overleaf">Overleaf<a class="headerlink" href="#term-Overleaf" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+</dd>
+<dt id="term-PCB">PCB<a class="headerlink" href="#term-PCB" title="Permalink to this term">¶</a></dt><dd><p>PCBs, or <em>printed circuit boards</em>, are custom boards designed with etched copper, in order to produce compact and intracate circuits.</p>
+</dd>
+<dt id="term-Project-Manager-PM">Project Manager (PM)<a class="headerlink" href="#term-Project-Manager-PM" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+</dd>
 <dt id="term-Restructured-Text-RST">Restructured Text (RST)<a class="headerlink" href="#term-Restructured-Text-RST" title="Permalink to this term">¶</a></dt><dd><p>Restructured Text (RST) is the markdown language used by our documentation website. More information on the language can be found here: (TODO)</p>
 </dd>
-<dt id="term-Scrum">Scrum<a class="headerlink" href="#term-Scrum" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+<dt id="term-Robot-Path-File">Robot Path File<a class="headerlink" href="#term-Robot-Path-File" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
 </dd>
-<dt id="term-Software-Backlog">Software Backlog<a class="headerlink" href="#term-Software-Backlog" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+<dt id="term-Scrum">Scrum<a class="headerlink" href="#term-Scrum" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
 </dd>
 <dt id="term-Sphinx">Sphinx<a class="headerlink" href="#term-Sphinx" title="Permalink to this term">¶</a></dt><dd><p>Sphinx is the document creation tool used by our documentation site. Sphinx is responsible for creating the webpage wrapper around the <a class="reference internal" href="#term-Restructured-Text-RST"><span class="xref std std-term">Restructured Text (RST)</span></a></p>
 </dd>
 <dt id="term-TeX">TeX<a class="headerlink" href="#term-TeX" title="Permalink to this term">¶</a></dt><dd><p>TeX is a markdown language made to automate document formatting and styling within a text document.</p>
 </dd>
 <dt id="term-User-Story">User Story<a class="headerlink" href="#term-User-Story" title="Permalink to this term">¶</a></dt><dd><p>(TODO)</p>
+</dd>
+<dt id="term-V5-Brain">V5 Brain<a class="headerlink" href="#term-V5-Brain" title="Permalink to this term">¶</a></dt><dd><p>The primary processing device for our robot. Provided by VEX Robotics, we are required to use this device as the primary interface with the motors on the robot, and can use it to handle many types of input sensors. This brain include 21 smart ports with built in RS-232 communication for V5 devices, as well as 8 3-wire legacy ports on the side for sensors and extra peripherals. More information about the V5 Robot Brain <a class="reference external" href="https://www.vexrobotics.com/276-4810.html">can be found here</a>.</p>
 </dd>
 </dl>
 </div>
@@ -206,7 +232,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../seasons/changeup/changeup.html" class="btn btn-neutral float-left" title="Change Up Season" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../seasons/tipping-point/tipping-point.html" class="btn btn-neutral float-left" title="Tipping Point Season" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
