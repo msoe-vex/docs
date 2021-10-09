@@ -13,7 +13,7 @@ Team Members
 ============
 The following team members made this season possible:
 
-- Nathan DuPont, Computer Science
+- Nathan DuPont, Computer Science 
 
 
 Robot CAD
