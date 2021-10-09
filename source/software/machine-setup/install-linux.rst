@@ -6,7 +6,7 @@ Install Linux
 Downloading Ubuntu
 ------------------
 
-Download Ubuntu from the `Ubuntu Website`_. 
+Download Ubuntu from the `Ubuntu Website`_. This will be used for our Virtual Machine, so we will just need the *Ubuntu 20.04.3 LTS*.
 
 .. warning::
     
@@ -18,7 +18,7 @@ For our development work, we use Ubuntu. In the past, Ubuntu was required to run
 Installing VirtualBox
 ---------------------
 
-First, install VirtualBox. This can be done through Software center or by downloading and installing VirtualBox from the `VirtualBox Website`_.
+First, install VirtualBox. This can be done through the `VirtualBox Website`_. For a Windows laptop, you'll need to download the *Windows hosts* option. For OS X or Linux, select your respective options and continue with the install.
 
 We recommend using VirtualBox as it is free and available on all platforms. 
 Feel free to use VMWare/Hyper-V/Similar, although you will be on your own to figure out guest OS integrations and USB forwarding. 

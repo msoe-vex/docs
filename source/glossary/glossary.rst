@@ -46,6 +46,9 @@ Glossary
     Kanban
         (TODO)
 
+    KiCAD
+        (TODO)
+
     LaTeX
         LaTeX is a flavor of :term:`TeX`. LaTeX is a compiled documentation language commonly used for technical papers and reports, including our Engineering Notebook.
 
@@ -54,6 +57,9 @@ Glossary
 
     Overleaf
         (TODO)
+
+    PCB
+        PCBs, or *printed circuit boards*, are custom boards designed with etched copper, in order to produce compact and intracate circuits. 
 
     Project Manager (PM)
         (TODO)

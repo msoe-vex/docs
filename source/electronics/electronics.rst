@@ -2,3 +2,10 @@
 
 Electronics
 ===========
+
+
+.. toctree::
+   
+   machine-setup/machine-setup
+   pcb-design
+
