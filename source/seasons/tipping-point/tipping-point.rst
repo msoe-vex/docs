@@ -14,6 +14,7 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
+- Michael Conner, Computer Science
 
 
 Robot CAD
