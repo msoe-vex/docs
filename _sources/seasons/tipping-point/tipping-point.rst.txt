@@ -14,6 +14,7 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
+- Samuel Brand, Software Engineering
 - Kevin Gray, Computer Science
 - Nicholas Gorecki, Software Engineering
 - Asher Sprigler, Computer Engineering
