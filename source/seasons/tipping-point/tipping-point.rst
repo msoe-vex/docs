@@ -14,7 +14,7 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
-- Nicholas Gorecki
+- Nicholas Gorecki, Software Engineering
 
 
 Robot CAD
