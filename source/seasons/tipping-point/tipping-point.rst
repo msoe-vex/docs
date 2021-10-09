@@ -15,6 +15,8 @@ The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
 - Asher Sprigler, Computer Engineering
+- Quinten Robley, Computer Science
+
 
 Robot CAD
 =========
