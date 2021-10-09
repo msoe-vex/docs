@@ -4,7 +4,7 @@ Git Setup
 Generate and Add an SSH Key to Github
 -------------------------------------
 
-Generate a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing ``Enter``. Feel free to enter a password if desired, but personally I press ``Enter`` twice to proceed with no password (much more convenient).
+Generate a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing ``Enter``. Feel free to enter a password if desired, or  press ``Enter`` twice to proceed with no password (which is much more convenient).
 
 .. code:: bash
 

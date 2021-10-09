@@ -20,6 +20,7 @@ The following team members made this season possible:
 - Asher Sprigler, Computer Engineering
 - John Paul Bunn, Computer Science & Computer Engineering
 - Quinten Robley, Computer Science
+- Alex Kempen, Computer Science
 
 
 Robot CAD
