@@ -45,3 +45,4 @@ To create commits, git must know what your name and email is. To tell git who we
 
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
+
