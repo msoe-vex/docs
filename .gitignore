@@ -1,6 +1,7 @@
 # User ignores
 .vscode/*
 !.vscode/tasks.json
+docs-venv/
 
 # Sphinx build artifacts
 build/
