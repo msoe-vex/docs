@@ -28,7 +28,7 @@ jobs:
     - name: Build Documentation
       run: |
         cd $GITHUB_WORKSPACE
-        /bin/bash -c "make html"
+        /bin/bash -c "source ./docs-venv/bin/activate && make html"
         
 
 
