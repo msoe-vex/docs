@@ -14,6 +14,7 @@ Team Members
 The following team members made this season possible:
 
 - Nathan DuPont, Computer Science
+- Quinten Robley, Computer Science
 
 
 Robot CAD
