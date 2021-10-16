@@ -9,7 +9,7 @@ Developer Machine Setup
     install-linux.rst
     install-vscode.rst
     install-docker.rst
-    setup-git.rst
+    install-git/install-git.rst
     install-sphinx.rst
 
 This guide has been developed to walk you through the required installations to contribute to our codebase. 
