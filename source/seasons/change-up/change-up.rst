@@ -6,7 +6,7 @@ Change Up Season
 
 Season Overview
 ===============
-Bro we won
+Change Up was the second year for the team. We competed in two competitions, and at the Virtual World Championship. We were awarded the Innovate Award at the Midwest League Tournament, as well as the Excellence Award at the World Championship. On performance, we placed second in the Virtual World Championship, scoring 125 in Programming Skills and 126 in Driver Skills.
 
 
 Team Members
@@ -39,7 +39,7 @@ __ https://cad.onshape.com/documents/befb5ca771514bfa22c10c84/w/242e357c130534f8
 
 Our VEX V5 Onshape CAD Library can be found `by clicking here`__.
 
-__https://cad.onshape.com/documents/2aba28475248f28b019e8672/w/04e64926555ce731d80a7b0b/e/6a5725d258590ebedc8017d4
+__ https://cad.onshape.com/documents/2aba28475248f28b019e8672/w/04e64926555ce731d80a7b0b/e/6a5725d258590ebedc8017d4
 
 Robot Code
 ==========
