@@ -3,12 +3,11 @@
 Software
 ========
 
-
 .. toctree::
    
    machine-setup/machine-setup
    development-process/development-process
-   development-tools
+   development-tools/development-tools
    repository-setup/repository-setup
 
 

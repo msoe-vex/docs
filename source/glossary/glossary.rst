@@ -29,6 +29,9 @@ Glossary
     Engineering Notebook
         The Engineering Notebook is a formal deliverable that our team curates during the entire year. As is done in a typical Engineering Notebook, we are required to document all decisions, testing, and results obtained from the season. The purpose of this document is to show how we got to where we are currently; in an ideal world, anyone should be able to *retrace our steps to achieve the same results and outcomes*. Our team uses :term:`Overleaf` to manage our notebook, which allows us to write it in :term:`LaTeX`. 
 
+    Git Bash
+        Git Bash is the default Git terminal on Windows. It can be used to interact with your file system with some Linux command support, but primarily is used for interacting with Git repositories.
+
     Grooming
         (TODO)
 
@@ -76,6 +79,9 @@ Glossary
     Sphinx
         Sphinx is the document creation tool used by our documentation site. Sphinx is responsible for creating the webpage wrapper around the :term:`Restructured Text (RST)`
 
+    Submodules 
+        (TODO)
+
     TeX
         TeX is a markdown language made to automate document formatting and styling within a text document.
 
@@ -86,3 +92,6 @@ Glossary
         The primary processing device for our robot. Provided by VEX Robotics, we are required to use this device as the primary interface with the motors on the robot, and can use it to handle many types of input sensors. This brain include 21 smart ports with built in RS-232 communication for V5 devices, as well as 8 3-wire legacy ports on the side for sensors and extra peripherals. More information about the V5 Robot Brain `can be found here`__.
 
         __ https://www.vexrobotics.com/276-4810.html
+
+    Version Control
+        (TODO)
