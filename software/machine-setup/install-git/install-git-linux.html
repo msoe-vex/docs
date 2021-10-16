@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installing Git on Linux &mdash; MSOE VEXU Docs  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Install Sphinx" href="../install-sphinx.html" />
+    <link rel="prev" title="Installing Git on Windows" href="install-git-windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> MSOE VEXU Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../our-team/our-team.html">Organization Management</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../software.html">Software</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../machine-setup.html">Developer Machine Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../install-linux.html">Install Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install-vscode.html">Installing Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install-docker.html">Install Docker</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="install-git.html">Install Git</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="install-git-windows.html">Installing Git on Windows</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Installing Git on Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../install-sphinx.html">Install Sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../development-process/development-process.html">Development Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development-tools/development-tools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../repository-setup/repository-setup.html">Repository-Specific Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../design/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../electronics/electronics.html">Electronics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../media/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../seasons/seasons.html">Seasons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">MSOE VEXU Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../software.html">Software</a> &raquo;</li>
+        
+          <li><a href="../machine-setup.html">Developer Machine Setup</a> &raquo;</li>
+        
+          <li><a href="install-git.html">Install Git</a> &raquo;</li>
+        
+      <li>Installing Git on Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/software/machine-setup/install-git/install-git-linux.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-git-on-linux">
+<h1>Installing Git on Linux<a class="headerlink" href="#installing-git-on-linux" title="Permalink to this headline">¶</a></h1>
+<p>Installing Git on Linux will allow to run any of our repositories, including those with any ROS dependencies that require Linux. This setup will walk you through the install process, and help you set up your Linux environment properly.</p>
+<div class="section" id="installing-the-git-client">
+<h2>Installing the Git Client<a class="headerlink" href="#installing-the-git-client" title="Permalink to this headline">¶</a></h2>
+<p>Installing the Git Client will allow you to run Git commands from any terminal in your Linux VM. To do this, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install git -y
+</pre></div>
+</div>
+<p>This will install the client you need to interact with our repositories.</p>
+</div>
+<div class="section" id="configuring-the-git-client">
+<h2>Configuring the Git Client<a class="headerlink" href="#configuring-the-git-client" title="Permalink to this headline">¶</a></h2>
+<p>In order for us to use Git with our GitHub account we have to link an SSH key between our device and the GitHub account we use.</p>
+<p>Stary by generating a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Feel free to enter a password if desired, or  press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> twice to proceed with no password (which is much more convenient).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+<p>Start the ssh-agent in the background</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Add your ssh key to the ssh-agent</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-add ~/.ssh/id_ed25519
+</pre></div>
+</div>
+<p>The next step is to add your public ssh key to your github account. Print out the contents of your public key by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat ~/.ssh/id_ed25519.pub
+</pre></div>
+</div>
+<p>Copy the output of the command by highlighting the key, and right clicking on it to copy.</p>
+<dl class="simple">
+<dt>..image:: images/copyingPublicKey.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Copying the public key generated in the previous step.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>In your browser, go to the <a href="https://github.com/settings/ssh/new" target="_blank">Github new SSH key page</a>.</p>
+<p>Paste the value from the previous step into the key box. Enter an appropriate name and add the key to your account.</p>
+<p>To create commits, git must know what your name and email is. To tell git who we are, run the following commands (obviously replace with your name / email).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.email <span class="s2">&quot;you@example.com&quot;</span>
+git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../install-sphinx.html" class="btn btn-neutral float-right" title="Install Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="install-git-windows.html" class="btn btn-neutral float-left" title="Installing Git on Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, MSOE Robotics - Raider Robotics VEXU.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

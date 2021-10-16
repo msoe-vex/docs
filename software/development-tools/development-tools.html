@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Git Setup &mdash; MSOE VEXU Docs  documentation</title>
+  <title>Development Tools &mdash; MSOE VEXU Docs  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Install Sphinx" href="install-sphinx.html" />
-    <link rel="prev" title="Install Docker" href="install-docker.html" /> 
+    <link rel="next" title="Git" href="git/git.html" />
+    <link rel="prev" title="Process Overview" href="../development-process/process-overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,20 +93,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../our-team/our-team.html">Organization Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../software.html">Software</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="machine-setup.html">Developer Machine Setup</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install-linux.html">Install Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="install-vscode.html">Installing Visual Studio Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="install-docker.html">Install Docker</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Git Setup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#generate-and-add-an-ssh-key-to-github">Generate and Add an SSH Key to Github</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configure-git-email-and-name">Configure Git Email and Name</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="install-sphinx.html">Install Sphinx</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-setup/machine-setup.html">Developer Machine Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../development-process/development-process.html">Development Process</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../development-tools.html">Development Tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Development Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git.html">Git</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../repository-setup/repository-setup.html">Repository-Specific Setup</a></li>
 </ul>
 </li>
@@ -165,15 +157,13 @@
         
           <li><a href="../software.html">Software</a> &raquo;</li>
         
-          <li><a href="machine-setup.html">Developer Machine Setup</a> &raquo;</li>
-        
-      <li>Git Setup</li>
+      <li>Development Tools</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/software/machine-setup/setup-git.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/software/development-tools/development-tools.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,37 +176,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="git-setup">
-<h1>Git Setup<a class="headerlink" href="#git-setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="generate-and-add-an-ssh-key-to-github">
-<h2>Generate and Add an SSH Key to Github<a class="headerlink" href="#generate-and-add-an-ssh-key-to-github" title="Permalink to this headline">¶</a></h2>
-<p>Generate a new SSH key. Make sure to use your actual email address in the below command. When prompted, use the default key storage location by pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Feel free to enter a password if desired, or  press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> twice to proceed with no password (which is much more convenient).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
-</pre></div>
+  <div class="section" id="development-tools">
+<h1>Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="git/git.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">git clone</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-clone.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-submodule.html">git submodule</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-submodule.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-status.html">git status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-status.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-checkout.html">git checkout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-checkout.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-add.html">git add</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-add.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-commit.html">git commit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-commit.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-push.html">git push</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-push.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-pull.html">git checkout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-pull.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-rebase.html">git rebase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/git-rebase.html#command-usage">Command Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/interacting-with-repositories.html">Interacting with Repositories</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<p>Start the ssh-agent in the background</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
-</pre></div>
-</div>
-<p>Add your ssh key to the ssh-agent</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-add ~/.ssh/id_ed25519
-</pre></div>
-</div>
-<p>The next step is to add your public ssh key to your github account. Read your public key by running the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>more ~/.ssh/id_ed25519.pub
-</pre></div>
-</div>
-<p>In your browser, go to the <a href="https://github.com/settings/ssh/new" target="_blank">Github new SSH key page</a></p>
-<p>Copy the output of the above command (highlight and right click to copy) and paste it in the key box. Enter an appropriate name and add the key to your account.</p>
-</div>
-<div class="section" id="configure-git-email-and-name">
-<h2>Configure Git Email and Name<a class="headerlink" href="#configure-git-email-and-name" title="Permalink to this headline">¶</a></h2>
-<p>To create commits, git must know what your name and email is. To tell git who we are, run the following commands (obviously replace with your name / email).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.email <span class="s2">&quot;you@example.com&quot;</span>
-git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
-</pre></div>
-</div>
-</div>
+<p>This section outlines many of the common tools we use while developing, and how they are used.</p>
 </div>
 
 
@@ -225,8 +231,8 @@ git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="install-sphinx.html" class="btn btn-neutral float-right" title="Install Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="install-docker.html" class="btn btn-neutral float-left" title="Install Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git/git.html" class="btn btn-neutral float-right" title="Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../development-process/process-overview.html" class="btn btn-neutral float-left" title="Process Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
