@@ -6,7 +6,7 @@ Tipping Point Season
 
 Season Overview
 ===============
-Bro we will win
+Tipping Point is the current season our team is competing in. 
 
 
 Team Members

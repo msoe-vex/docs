@@ -6,7 +6,7 @@ Tower Takeover Season
 
 Season Overview
 ===============
-Bro we got DQ'ed
+Tower Takeover was the first season we competed in as a team. We went to one competition, and competed in the Virtual World Championship. At our one competition, we were placed on the 6th seed alliance in eliminations, and made it to the semi-finals before being disqualified in a close match.
 
 
 Team Members
@@ -26,7 +26,7 @@ The following team members made this season possible:
 
 Robot CAD
 =========
-funny joke
+No robot CAD exists for this year.
 
 
 Robot Code
