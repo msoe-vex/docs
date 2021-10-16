@@ -35,6 +35,9 @@ extensions = [
     'sphinx.ext.githubpages'
 ]
 
+# This is required to allow common headers between documents
+autosectionlabel_prefix_document = True
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
