@@ -12,5 +12,6 @@ Command Usage
     git push [ARGUMENT]
 
 **Optional Arguments:**
+
 :-f:
     Force push onto the desired branch. This often times **should not be used** unless dealing with pushing after a rebase.

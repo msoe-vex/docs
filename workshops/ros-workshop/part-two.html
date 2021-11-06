@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Part 2: Creating Nodes &mdash; MSOE VEXU Docs  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 3: Simulation" href="part-three.html" />
+    <link rel="prev" title="Part 1: Using Nodes" href="part-one.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MSOE VEXU Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../our-team/our-team.html">Organization Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../design/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../electronics/electronics.html">Electronics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../media/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seasons/seasons.html">Seasons</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../workshops.html">Workshops</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ros-workshop.html">ROS Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part-one.html">Part 1: Using Nodes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Part 2: Creating Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-ros-package">Creating a ROS Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#publisher-py">publisher.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subscriber-py">subscriber.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-our-package-xml">Updating our package.xml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-an-entrypoint">Adding an Entrypoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-dependencies">Updating Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-our-nodes">Testing Our Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-nodes">Adding Additional Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="part-three.html">Part 3: Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ros2-commands/ros2-commands.html">ROS2 Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MSOE VEXU Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../workshops.html">Workshops</a> &raquo;</li>
+        
+          <li><a href="ros-workshop.html">ROS Workshop</a> &raquo;</li>
+        
+      <li>Part 2: Creating Nodes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/workshops/ros-workshop/part-two.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-2-creating-nodes">
+<h1>Part 2: Creating Nodes<a class="headerlink" href="#part-2-creating-nodes" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have some experience with basic nodes, let’s create our own. To start, open <strong>Visual Studio Code</strong> and open the “ros-workshop” folder located in your home directory.</p>
+<p>One of the largest problems with ROS is it’s complicated file structure. Packages often contain tons of pieces and configuration files, that allow everything to be linked in and created properly. In order to follow this pattern correctly, we are given multiple utilities to aid in the process.</p>
+<div class="section" id="creating-a-ros-package">
+<h2>Creating a ROS Package<a class="headerlink" href="#creating-a-ros-package" title="Permalink to this headline">¶</a></h2>
+<p>To create a package, we first want to be in a <strong>workspace</strong>. A workspace is just a folder dedicated to holding multiple ROS packages, and should be a separate folder. This allows for certain commands such as <em>rosdep</em> to be defined and run from a specified location.</p>
+<p>Run the following commands to create your workspace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop
+mkdir -p simple_node_ws
+<span class="nb">cd</span> ./simple_node_ws
+</pre></div>
+</div>
+<p>We are now located in our workspace. From here, we can create our package with the following line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create --build-type ament_python py_pubsub
+</pre></div>
+</div>
+<p>This creates a <strong>Python</strong> ROS Package with the name <strong>py_pubsub</strong>. If you wish to create a different package, or change the name, that can be done in the command by changing the last argument.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For this workshop, keep the package name as <strong>py_pubsub</strong> as it will make working with the configuration files much easier.</p>
+</div>
+<p>We now can create the code for our different nodes! For this section, we will be providing the code for the base nodes, and modifications can be made to them. To start, run the following commands to create the files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/publisher.py
+touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/subscriber.py
+</pre></div>
+</div>
+<p>After running these commands, your file structure should look something like this:</p>
+<img alt="publisher.py and subscriber.py created in the package folder" src="../../_images/vscode-pubsub-files-created.png" />
+<p>The first file is our <em>publisher</em>. It’s primary responsibility is to post information to a topic on the network, which other things can then listen to. Copy the following code into the newly created <cite>publisher.py</cite> file.</p>
+</div>
+<div class="section" id="publisher-py">
+<h2>publisher.py<a class="headerlink" href="#publisher-py" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Package dependencies</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+
+
+<span class="c1"># Package code</span>
+<span class="k">class</span> <span class="nc">Publisher</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Call into the parent node to create the name of this node</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;publisher&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Create a publisher with an assigned &quot;topic&quot; to send data to</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># Define how long we want to spend between messages</span>
+        <span class="n">timer_period</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># seconds</span>
+
+        <span class="c1"># Call the &quot;create_timer&quot; function from the Node class, which will execute</span>
+        <span class="c1"># the callback function &quot;timer_callback&quot; every time &quot;timer_period&quot; elapses</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="n">timer_period</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>
+
+        <span class="c1"># Initialize the counter to 0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Create a string to hold our message</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+
+        <span class="c1"># Populate the message with the string we want</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Hello World: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span>
+
+        <span class="c1"># Call the publisher in order to send our message to the ROS network</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="c1"># Log what we published</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Publishing: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Increment our instance counter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># Initialize the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="c1"># Create a new publisher instance</span>
+    <span class="n">publisher</span> <span class="o">=</span> <span class="n">Publisher</span><span class="p">()</span>
+
+    <span class="c1"># &quot;Spin&quot; to update the nodes</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">publisher</span><span class="p">)</span>
+
+    <span class="c1"># Explicitly destroy the node (similar to a deconstructor - optional here)</span>
+    <span class="n">publisher</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+
+    <span class="c1"># Shut down the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The second file is our <em>subscriber</em>. It’s primary responsibility is to listen to messages in the ROS network on a specified topic, and to do something with the data once a new message is received. Copy the following code into the newly created <cite>subscriber.py</cite> file.</p>
+</div>
+<div class="section" id="subscriber-py">
+<h2>subscriber.py<a class="headerlink" href="#subscriber-py" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Project dependencies</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+
+
+<span class="c1"># Project code</span>
+<span class="k">class</span> <span class="nc">Subscriber</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Call the constructor for the parent Node object with the node name</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;subscriber&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Create a subscription to the topic &quot;topic&quot;, linked to our callback</span>
+        <span class="c1"># function &quot;listener_callback&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">String</span><span class="p">,</span>
+            <span class="s1">&#39;topic&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">listener_callback</span><span class="p">,</span>
+            <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># Call this to prevent a warning from it &quot;being unused&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription</span>
+
+    <span class="c1"># Define our callback function</span>
+    <span class="k">def</span> <span class="nf">listener_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="c1"># Log what was received</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;I heard: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># Initialize the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="c1"># Create a new publisher instance</span>
+    <span class="n">minimal_subscriber</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">()</span>
+
+    <span class="c1"># &quot;Spin&quot; to update the nodes</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">minimal_subscriber</span><span class="p">)</span>
+
+    <span class="c1"># Explicitly destroy the node (similar to a deconstructor - optional here)</span>
+    <span class="n">minimal_subscriber</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+
+    <span class="c1"># Shut down the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updating-our-package-xml">
+<h2>Updating our package.xml<a class="headerlink" href="#updating-our-package-xml" title="Permalink to this headline">¶</a></h2>
+<p>Now that our files are created, we need to tell ROS what dependencies it needs to load when building and running our projects. For this, we use the <cite>package.xml</cite> file to create notes about these dependencies.</p>
+<p>Open the <cite>package.xml</cite> file in VSCode, and edit the following sections:</p>
+<dl class="field-list simple">
+<dt class="field-odd">&lt;description&gt;</dt>
+<dd class="field-odd"><p>Add a description for your package</p>
+</dd>
+<dt class="field-even">&lt;maintainer&gt;</dt>
+<dd class="field-even"><p>Add your email and name as the maintainer</p>
+</dd>
+<dt class="field-odd">&lt;license&gt;</dt>
+<dd class="field-odd"><p>Add default license information to your package. If unsure of what to choose, enter in <cite>Apache License 2.0</cite>.</p>
+</dd>
+</dl>
+<p>With these added, we now need to add in our dependencies. The ROS <cite>package.xml</cite> format allows us to specify different types of dependencies for our project with different tags. For instance, we can use <cite>&lt;exec_depend&gt;[DEPENDENCY]&lt;/exec_depend&gt;</cite> tags to specify dependencies that are needed for when we execute our code. We can also use <cite>&lt;test_depend&gt;[DEPENDENCY]&lt;/test_depend&gt;</cite> tags to specify test dependencies needed to load the test framework. In this case, <cite>[DEPENDENCY]</cite> would be changed to the package or dependency name you have.</p>
+<p>If we look closely in our Python code, we can find a few imports used by our Python programs. These imports are <strong>execution dependencies</strong> and need to be added to our <cite>package.xml</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+</pre></div>
+</div>
+<p>Both of our files include dependencies on the <em>rclpy</em> package, as well as the <em>std_msgs</em> package. Let’s add those as <strong>execution dependencies</strong> by adding the following lines after our <cite>&lt;license&gt;&lt;/license&gt;</cite> tags:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;exec_depend&gt;</span>rclpy<span class="nt">&lt;/exec_depend&gt;</span>
+<span class="nt">&lt;exec_depend&gt;</span>std_msgs<span class="nt">&lt;/exec_depend&gt;</span>
+</pre></div>
+</div>
+<p>These will tell our ROS program that these packages are needed to run our code.</p>
+</div>
+<div class="section" id="adding-an-entrypoint">
+<h2>Adding an Entrypoint<a class="headerlink" href="#adding-an-entrypoint" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have our dependencies defined, we need to tell our program what to execute. This can be done within the <cite>setup.py</cite> file. The <cite>setup.py</cite> file is used to tell our ROS project <em>what</em> to run, and <em>how</em> to run it. Open up the <cite>setup.py</cite> file in VSCode.</p>
+<p>Change the <cite>maintainer</cite>, <cite>maintainer_email</cite>, <cite>description</cite>, and <cite>license</cite> files to match what you created in the <cite>package.xml</cite> file.</p>
+<p>Next, we need to define our <strong>entrypoints</strong>. This tells ROS how to run our different nodes within the package. Entrypoints need to be added to the following section of code in the file (without the comment):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1"># TODO add entrypoints here!</span>
+    <span class="p">],</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>In place of the <cite>#TODO</cite> comment that we added, we can specify one or more entrypoints for how ROS can run our program. Each entrypoint will be put in as a string, and multiple entrypoints will be separated by commas.</p>
+<p>The entrypoint string follows the format below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;[PACKAGE] = [FILE]:[EXECUTABLE]&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">[PACKAGE]</dt>
+<dd class="field-odd"><p>This is the name you want ROS to use to launch your node. For example, replacing this with “publisher” will allow ROS to launch the associated code by calling “publisher”</p>
+</dd>
+<dt class="field-even">[FILE]</dt>
+<dd class="field-even"><p>This is the path and file name of the file containing the node. This includes the <strong>path relative to the setup.py script</strong>, but instead of using slashes, periods are used. For example, our “publisher” file can be referenced with <cite>py_pubsub.publisher</cite></p>
+</dd>
+<dt class="field-odd">[EXECUTABLE]</dt>
+<dd class="field-odd"><p>This is the function you want to be executed. For us, we always want it to be <cite>main</cite>, as this will trigger our nodes to start properly.</p>
+</dd>
+</dl>
+<p>Copy and paste the following configuration lines into where the previous <cite>#TODO</cite> comment was:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;publisher = py_pubsub.publisher:main&#39;</span><span class="p">,</span>
+<span class="s1">&#39;subscriber = py_pubsub.subscriber:main&#39;</span>
+</pre></div>
+</div>
+<p>With that, it’s now about time to test our node.</p>
+</div>
+<div class="section" id="updating-dependencies">
+<h2>Updating Dependencies<a class="headerlink" href="#updating-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Right before we start, we want to update the dependencies of our project. This can be done with the <cite>rosdep</cite> command.</p>
+<p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
+rosdep install -i --from-path src --rosdistro foxy -y
+</pre></div>
+</div>
+<p>This will check to make sure all dependencies of our packages in the workspace are installed.</p>
+<p>With this completed, it’s time to test our nodes.</p>
+</div>
+<div class="section" id="testing-our-nodes">
+<h2>Testing Our Nodes<a class="headerlink" href="#testing-our-nodes" title="Permalink to this headline">¶</a></h2>
+<p>To test our ndoes, we need to build them first. Run the following commands to build our package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
+colcon build --packages-select py_pubsub
+</pre></div>
+</div>
+<p>This command will use the files we created and build a ROS package with them. This adds in all of the ROS libraries that give us the ability to easily communicate between nodes, along with the remainder of the ROS library.</p>
+<p>In order for our terminal to be properly setup with our package, we first need to <strong>source our setup files</strong>. This connects our terminals with all of the libraries and additional components needed by our package to make it run properly. This can be done by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
+. install/setup.bash
+</pre></div>
+</div>
+<p>Finally, we can run our nodes with the <cite>ros2 run</cite> command. Use the following command to run our <strong>publisher node</strong>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run py_pubsub publisher
+</pre></div>
+</div>
+<p>With the publisher running, we can also run our <strong>subscriber node</strong> from a separate terminal, with the code below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run py_pubsub subscriber
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-additional-nodes">
+<h2>Adding Additional Nodes<a class="headerlink" href="#adding-additional-nodes" title="Permalink to this headline">¶</a></h2>
+<p>With the previously created nodes working, we can add in an additional node to send more data to the network. In this case, let’s design a node named  <cite>time_publisher</cite> that publishes the <em>current datetime</em> to the topic <cite>topic</cite>.</p>
+<p>To do this, create a file called <cite>time_publisher.py</cite> in the same folder as <cite>publisher.py</cite> and <cite>subscriber.py</cite>.</p>
+<p>In here, paste the template code located below, and complete the few <cite>#TODO</cite> lines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Package dependencies</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="c1"># NOTE: We are adding a new dependency to the &quot;datetime&quot; library</span>
+
+
+<span class="c1"># Package code</span>
+<span class="k">class</span> <span class="nc">TimePublisher</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Call into the parent node to create the name of this node</span>
+        <span class="c1"># TODO - Create a node called &#39;time_publisher&#39; based on the other publisher node</span>
+
+        <span class="c1"># Create a publisher with an assigned &quot;topic&quot; to send data to</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="c1"># TODO - same as the other publisher node</span>
+
+        <span class="c1"># Define how long we want to spend between messages</span>
+        <span class="n">timer_period</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="c1"># Call the &quot;create_timer&quot; function from the Node class, which will execute</span>
+        <span class="c1"># the callback function &quot;timer_callback&quot; every time &quot;timer_period&quot; elapses</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="n">timer_period</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Create a string to hold our message</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+
+        <span class="c1"># Populate the message with the current time</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Current Time: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Call the publisher in order to send our message to the ROS network</span>
+        <span class="c1"># TODO - Publish the message</span>
+
+        <span class="c1"># Log what we published</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Publishing: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># Initialize the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="c1"># Create a new publisher instance</span>
+    <span class="c1"># TODO - Create an instance of our new class</span>
+
+    <span class="c1"># &quot;Spin&quot; to update the nodes</span>
+    <span class="c1"># TODO - Spin to update the instance of our new node</span>
+
+    <span class="c1"># Explicitly destroy the node (similar to a deconstructor - optional here)</span>
+    <span class="n">time_publisher</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+
+    <span class="c1"># Shut down the ROS node</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Before testing, we also need to update our <cite>package.xml</cite> with a new dependency. Within <cite>package.xml</cite>, add <strong>datetime</strong> as an execution dependency.</p>
+<p>Finally, we need to define a new entrypoint for our new node. Within <cite>setup.py</cite>, create a new entrypoint under the name <cite>time_publisher</cite>, linking to the <cite>time_publisher.py</cite> file you created previously.</p>
+<p>With this done, you should rebuild all of the nodes, source the configuration script (<cite>. install/setup.bash</cite>), and run all three of the nodes!</p>
+<p>You should see now that the subscriber is picking up messages from both nodes. Another powerful feature in ROS is the ability to easily connect multiple nodes together - neither of the previous nodes needed to be changed in order to link in this node! In addition, we also can have this node running at a completely different rate than the other nodes (running at 1 second instead of 500 ms), without changing anything outside of the node.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="part-three.html" class="btn btn-neutral float-right" title="Part 3: Simulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="part-one.html" class="btn btn-neutral float-left" title="Part 1: Using Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, MSOE Robotics - Raider Robotics VEXU.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

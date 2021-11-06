@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Part 3: Simulation &mdash; MSOE VEXU Docs  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ROS2 Commands" href="ros2-commands/ros2-commands.html" />
+    <link rel="prev" title="Part 2: Creating Nodes" href="part-two.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MSOE VEXU Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../our-team/our-team.html">Organization Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../design/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../electronics/electronics.html">Electronics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../media/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seasons/seasons.html">Seasons</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../workshops.html">Workshops</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ros-workshop.html">ROS Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part-one.html">Part 1: Using Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part-two.html">Part 2: Creating Nodes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Part 3: Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d-simulation">2D Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3D Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opening-the-simulator">Opening the Simulator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-turtlebot3">Building turtlebot3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ros2-commands/ros2-commands.html">ROS2 Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MSOE VEXU Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../workshops.html">Workshops</a> &raquo;</li>
+        
+          <li><a href="ros-workshop.html">ROS Workshop</a> &raquo;</li>
+        
+      <li>Part 3: Simulation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/workshops/ros-workshop/part-three.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-3-simulation">
+<h1>Part 3: Simulation<a class="headerlink" href="#part-3-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d-simulation">
+<h2>2D Simulation<a class="headerlink" href="#d-simulation" title="Permalink to this headline">¶</a></h2>
+<p>2D Simulation is a great place to start exploring the turtlebot platform.</p>
+<p>Let’s start by running the base <cite>turtlesim</cite> program to open our primary window.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run turtlesim turtlesim_node
+</pre></div>
+</div>
+<p>This should generate a window with a turtle in the center. In a second terminal, run the following command to start up a node to control the turtle:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run turtlesim turtle_teleop_key
+</pre></div>
+</div>
+<p>With this second terminal in focus, you should now be able to control the turtle using the arrow keys!</p>
+<p>From here, we can also open the <cite>rqt</cite> utility to better understand our current ROS network. Within an unused terminal window, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rqt
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>3D Simulation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>One of the largest features of ROS is it’s ability to simulate and visualize 3D environments. This section will introduce some of the tools that allow for these features, and start to walk through the basics of how they work.</p>
+</div>
+<div class="section" id="opening-the-simulator">
+<h2>Opening the Simulator<a class="headerlink" href="#opening-the-simulator" title="Permalink to this headline">¶</a></h2>
+<p>Let’s open one of the tutorial worlds provided to us in Gazebo. To do so, run the following command in an unused terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+</pre></div>
+</div>
+<p>Opening this up, we should see the Gazebo environment load in with a simple test robot. Explore some of the tools in the environment, and look around.</p>
+<p>Since we know where the “world” file is that it’s loading, let’s take a look at it. Type the following command into a second unused terminal, to open up the world configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gedit /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+</pre></div>
+</div>
+<p>Looking around, everything is all defined in XML format. The entire robot and the surrounding world are all defined within this file, along with all the rigging to make the robot move. Astute observers may also notice the commands located at the top of the file. Let’s try running one of them to control the robot.</p>
+<p>In a third unusued terminal, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic pub /demo/cmd_demo geometry_msgs/Twist <span class="s1">&#39;{linear: {x: 1.0}}&#39;</span> -1
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-turtlebot3">
+<h2>Building turtlebot3<a class="headerlink" href="#building-turtlebot3" title="Permalink to this headline">¶</a></h2>
+<p>Turtlebot3 is an introductory program used to teach people how to work with some of the ROS simulation software. We have included the Gazebo code for this section. However, you still need to build it on your machine.</p>
+<p>Similarly to past sections, run the following commands to enter the Gazebo workspace and build the package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/gazebo_ws
+colcon build --symlink-install
+</pre></div>
+</div>
+<p>This will start building the Gazebo project for us to run simulations. Once complete, we need to run the following commands to run the final setup, same as in the previous step:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/gazebo_ws
+. install/setup.bash
+</pre></div>
+</div>
+<p>Once we get this run, it’s time to open Gazebo. This may take some time, and can be started with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">TURTLEBOT3_MODEL</span><span class="o">=</span>burger
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+</pre></div>
+</div>
+<p>While in the simulator, you can create an additional node to allow you to control the robot. Run the following commands <strong>in a second terminal</strong> to add robot control based on arrow key inputs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run turtlebot3_teleop teleop_keyboard
+</pre></div>
+</div>
+<p>Once completed looking around the world, return to the terminal window and press <cite>Control</cite> + <cite>C</cite> to exit. Feel free to run the simulation in any of the available configurations, as defined below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">TURTLEBOT3_MODEL</span><span class="o">=[</span>ROBOT<span class="o">]</span>
+ros2 launch turtlebot3_gazebo <span class="o">[</span>WORLD<span class="o">]</span>.launch.py
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">[ROBOT]</dt>
+<dd class="field-odd"><p>The type of robot to run. This can either be <cite>burger</cite>, <cite>waffle</cite>, or <cite>waffle_pi</cite></p>
+</dd>
+<dt class="field-even">[WORLD]</dt>
+<dd class="field-even"><p>The type of world to load. This can either be <cite>empty_world</cite>, <cite>turtlebot3_world</cite>, or <cite>turtlebot3_house</cite></p>
+</dd>
+</dl>
+<p>As a note, the robots running in the simulation are created from actual robots that can be purchased. While pricy, custom CAD can be imported into Gazebo and controlled with a bit of configuration.</p>
+<img alt="Picture of the consumer ROS waffle robot" src="../../_images/waffle-robot.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ros2-commands/ros2-commands.html" class="btn btn-neutral float-right" title="ROS2 Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="part-two.html" class="btn btn-neutral float-left" title="Part 2: Creating Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, MSOE Robotics - Raider Robotics VEXU.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
