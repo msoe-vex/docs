@@ -18,3 +18,5 @@ Configuring the Virtual Machine
 -------------------------------
 
 With VirtualBox open, go to `File` > `Import Appliance` to import the Virtual Machine instance we have created. Find the `.ova` file that was downloaded, and select it for the `File` box in the window.
+
+When you import the appliance, you can leave all of the settings as default (continue hitting "Next"), and then press "Import" to complete the process.
