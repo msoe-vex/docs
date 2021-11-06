@@ -22,6 +22,7 @@ documentation produced and shared on our SharePoint website. All of these resour
    electronics/electronics
    media/media
    seasons/seasons
+   workshops/workshops
    glossary/glossary
 
 .. Indices and tables
