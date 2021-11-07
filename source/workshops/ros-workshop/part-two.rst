@@ -33,12 +33,7 @@ This creates a **Python** ROS Package with the name **py_pubsub**. If you wish t
     For this workshop, keep the package name as **py_pubsub** as it will make working with the configuration files much easier.
 
 
-We now can create the code for our different nodes! For this section, we will be providing the code for the base nodes, and modifications can be made to them. To start, run the following commands to create the files:
-
-.. code:: bash
-
-    touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/publisher.py
-    touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/subscriber.py
+We now can create the code for our different nodes! For this section, we will be providing the code for the base nodes, and modifications can be made to them. To start, create the `publisher.py` and `subscriber.py` files, which can be done by *right-clicking* on the inner "py-pubsub" folder (or whatever package name you chose), selecting `New File`, and adding in the name for the file you want to make.
 
 After running these commands, your file structure should look something like this:
 
@@ -270,7 +265,7 @@ Run the following commands:
 .. code:: bash
 
     cd ~/ros-workshop/simple_node_ws
-    rosdep install -i --from-path src --rosdistro foxy -y
+    rosdep install -i --from-path py_pubsub --rosdistro foxy -y
 
 This will check to make sure all dependencies of our packages in the workspace are installed.
 

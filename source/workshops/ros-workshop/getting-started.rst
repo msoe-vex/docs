@@ -12,7 +12,13 @@ Before starting this guide, make sure you have the following things installed:
 
 :download:`VirtualBox <https://download.virtualbox.org/virtualbox/6.1.28/VirtualBox-6.1.28-147628-Win.exe>`
 
+:download:`VirtualBox Extension Pack <https://download.virtualbox.org/virtualbox/6.1.28/Oracle_VM_VirtualBox_Extension_Pack-6.1.28.vbox-extpack>`
+
 :download:`VirtualBox VM Instance <https://msoe.box.com/s/xr0wf981odr35rkyh0hgn1wgupkcvt5s>`
+
+.. warning::
+
+    Make sure you install the items in the list from top to bottom! Each element depends on those above it - start with the VirtualBox installation, move to the Extension Pack, and finally install the VM Instance.
 
 Configuring the Virtual Machine
 -------------------------------
