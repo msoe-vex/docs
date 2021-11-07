@@ -212,11 +212,7 @@ mkdir -p simple_node_ws
 <p class="admonition-title">Note</p>
 <p>For this workshop, keep the package name as <strong>py_pubsub</strong> as it will make working with the configuration files much easier.</p>
 </div>
-<p>We now can create the code for our different nodes! For this section, we will be providing the code for the base nodes, and modifications can be made to them. To start, run the following commands to create the files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/publisher.py
-touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/subscriber.py
-</pre></div>
-</div>
+<p>We now can create the code for our different nodes! For this section, we will be providing the code for the base nodes, and modifications can be made to them. To start, create the <cite>publisher.py</cite> and <cite>subscriber.py</cite> files, which can be done by <em>right-clicking</em> on the inner “py-pubsub” folder (or whatever package name you chose), selecting <cite>New File</cite>, and adding in the name for the file you want to make.</p>
 <p>After running these commands, your file structure should look something like this:</p>
 <img alt="publisher.py and subscriber.py created in the package folder" src="../../_images/vscode-pubsub-files-created.png" />
 <p>The first file is our <em>publisher</em>. It’s primary responsibility is to post information to a topic on the network, which other things can then listen to. Copy the following code into the newly created <cite>publisher.py</cite> file.</p>
@@ -410,7 +406,7 @@ touch ~/ros-workshop/simple_node_ws/src/py_pubsub/py_pubsub/subscriber.py
 <p>Right before we start, we want to update the dependencies of our project. This can be done with the <cite>rosdep</cite> command.</p>
 <p>Run the following commands:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
-rosdep install -i --from-path src --rosdistro foxy -y
+rosdep install -i --from-path py_pubsub --rosdistro foxy -y
 </pre></div>
 </div>
 <p>This will check to make sure all dependencies of our packages in the workspace are installed.</p>
