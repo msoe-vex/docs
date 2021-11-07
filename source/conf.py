@@ -32,7 +32,8 @@ extensions = [
     'sphinx_rtd_theme',
 	'myst_parser',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinx_copybutton'
 ]
 
 # This is required to allow common headers between documents
