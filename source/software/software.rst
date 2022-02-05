@@ -5,10 +5,10 @@ Software
 
 .. toctree::
    
-   machine-setup/machine-setup
+   setup/setup
+   robot-code/robot-code
    development-process/development-process
    development-tools/development-tools
-   repository-setup/repository-setup
 
 
 The software team is responsible for development and maintenance on multiple systems, all managed through our :term: `GitHub` team. The primary systems are outlined below:
