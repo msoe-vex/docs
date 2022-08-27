@@ -19,10 +19,10 @@ documentation produced and shared on our SharePoint website. All of these resour
    our-team/our-team
    software/software
    design/design
-   electronics/electronics
    media/media
    seasons/seasons
    workshops/workshops
+   deprecated/deprecated
    glossary/glossary
 
 .. Indices and tables
