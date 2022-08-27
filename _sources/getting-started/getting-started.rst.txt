@@ -25,13 +25,13 @@ Slack is currently used as our primary means of team communication. This slack c
 GitHub is used for all software projects. GitHub allows us to integrate our project management into our software projects, while also adding source control to our work. The software backlog can be found as a team project board (LINK HERE), which contains prioritized tasks for all current work on the team. To join the GitHub team, request access in the software channel in Slack and we will send an invitation to you.
 
 
-**OnShape** (|https://onshape.com/|)
+**Onshape** (|https://onshape.com/|)
 
 .. |https://onshape.com/| raw:: html
 
     <a href="https://onshape.com/" target="_blank">https://onshape.com/</a>
 
-OnShape is used for all design/CAD projects. OnShape provides a collaborative environment to work on CAD projects, as well as integrating source control into the design process. All documents within the OnShape team should be owned by the team email; if you want a new document created, please create it and transfer ownership to the team account (accounts@msoevex.com) so we can handle document organization. To join the OnShape team, request access in the design channel in Slack and we will send an invitation to you.
+Onshape is used for all design/CAD projects. Onshape provides a collaborative environment to work on CAD projects, as well as integrating source control into the design process. All documents within the Onshape team should be owned by the team email; if you want a new document created, please create it and transfer ownership to the team account (accounts@msoevex.com) so we can handle document organization. To join the Onshape team, request access in the design channel in Slack and we will send an invitation to you.
 
 
 **SharePoint** (|https://sharepoint.msoevex.com|)
