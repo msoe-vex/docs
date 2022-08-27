@@ -24,10 +24,13 @@ The embedded robot code controls all of the onboard systems and communication pr
 :GitHub:
    https://github.com/msoe-vex/web-dashboard
 
-The WebDashboard is a web interface that allows for the creation of robot paths that can be run on compatible robots. These paths specify waypoints on the field that a robot should travel to within a sequence, with interpolated points to allow the robot to perform clean movements between the points. This application exports the path as a :term:`Robot Path File` in JSON, which is then saved to the robot on an SD card. The application is currently built in JavaScript, with a React rewrite in progress.
+:Live Website:
+   https://msoe-vex.github.io/web-dashboard/www/
+
+The Web Dashboard is a web interface that allows for the creation of robot paths that can be run on compatible robots. These paths specify waypoints on the field that a robot should travel to within a sequence, with interpolated points to allow the robot to perform clean movements between the points. This application exports the path as a :term:`Robot Path File` in JSON, which is then saved to the robot on an SD card. The application is currently built in JavaScript, with a React rewrite in progress.
 
 .. toctree::
-   :hidden:   
 
    software-setup/software-setup
    electronics/electronics
+   web-dashboard/web-dashboard
