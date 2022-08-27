@@ -29,4 +29,5 @@ The WebDashboard is a web interface that allows for the creation of robot paths 
 .. toctree::
    :hidden:   
 
+   software-setup/software-setup
    electronics/electronics
