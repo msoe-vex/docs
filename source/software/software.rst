@@ -32,5 +32,7 @@ The Web Dashboard is a web interface that allows for the creation of robot paths
 .. toctree::
 
    software-setup/software-setup
+   software-setup/using-git
    electronics/electronics
    web-dashboard/web-dashboard
+   
