@@ -24,7 +24,7 @@ Next, we source our newly created virtual environment
 
 .. warning::
 
-    It is important that you remember to source the virtual enviroment each time you open a terminal session and want to interact with the docs repo. 
+    It is important that you remember to source the virtual environment each time you open a terminal session and want to interact with the docs repo. 
     
     If you forget, you will get errors about packages not being available.
 
