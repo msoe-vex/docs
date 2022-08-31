@@ -11,7 +11,10 @@ Our team uses GitHub to coordinate code development among team members.
 
 VS Code
 -------
-Visual Studio Code (VS Code) is our recommend IDE for working on software. It is very flexible and extensible, and has many useful add-ons and extensions.
+Visual Studio Code (VS Code) is our recommend IDE for working on software.
+
+.. tip::
+    Visual Studio Code is our recommended IDE for new users. You are free to use whatever IDE you prefer.
 
 If you don't have Visual Studio Code already, you can download it here: `Visual Studio Code <code.visualstudio.com/download>`_
 
@@ -20,4 +23,14 @@ If you don't have Visual Studio Code already, you can download it here: `Visual 
 
 After installing VS Code, sign in to your GitHub account in VS Code by clicking on the account icon in the bottom left hand corner.
 
-To learn how to open and run a specific Raider Robotics project, see that project's page.
+Git
+---
+Git is a Command Line Interface (CLI) for working with GitHub from the command line.
+
+You can find instructions for installing git by clicking on Source Control in Visual Studio Code (located in the left panel, or by pressing `Ctrl+Shift+G`).
+
+File Management
+---------------
+We recommend creating a single folder named `raider-robotics` containing all of your local raider robotics code.
+You can then clone the repos of the projects you're planning on working on into this folder. 
+See the pages of specific Raider Robotics projects to learn how to run and build them.
