@@ -23,6 +23,11 @@ If you don't have Visual Studio Code already, you can download it here: `Visual 
 
 After installing VS Code, sign in to your GitHub account in VS Code by clicking on the account icon in the bottom left hand corner.
 
+Recommended settings:
+    * Enable auto-save under settings
+    * Add the VS Code vim extension
+    * Add a spellcheck extension
+
 Git
 ---
 Git is a Command Line Interface (CLI) for working with GitHub from the command line.
@@ -35,5 +40,7 @@ File Management
 ---------------
 We recommend creating a single folder named ``raider-robotics`` containing all of your local raider robotics code.
 You can then clone the repositories of the projects you're planning on working on into this folder. 
+
+.. todo: add detailed info on creating folder
 
 See the pages of specific Raider Robotics projects to learn how to do this.
