@@ -27,13 +27,13 @@ Git
 ---
 Git is a Command Line Interface (CLI) for working with GitHub from the command line.
 
-You can find instructions for installing git by clicking on Source Control in Visual Studio Code (located in the left panel, or by pressing `Ctrl+Shift+G`).
+You can find instructions for installing git by clicking on Source Control in Visual Studio Code (located in the left panel, or by pressing ``Ctrl+Shift+G``).
 
 Git is merely an alternative to using Source Control. Many of the actions git provides can also be done via the Source Control menu in VS Code.
 
 File Management
 ---------------
-We recommend creating a single folder named `raider-robotics` containing all of your local raider robotics code.
+We recommend creating a single folder named ``raider-robotics`` containing all of your local raider robotics code.
 You can then clone the repositories of the projects you're planning on working on into this folder. 
 
 See the pages of specific Raider Robotics projects to learn how to do this.
