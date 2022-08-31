@@ -1,5 +1,3 @@
-.. This document creates a brief overview of this documentation
-
 Software
 ========
 
@@ -31,8 +29,8 @@ The Web Dashboard is a web interface that allows for the creation of robot paths
 
 .. toctree::
 
+   docs/docs
    software-setup/software-setup
    software-setup/using-git
    electronics/electronics
    web-dashboard/web-dashboard
-   
