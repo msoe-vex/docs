@@ -7,7 +7,7 @@ The Web Dashboard is a web interface that allows for the creation of robot paths
    https://github.com/msoe-vex/web-dashboard
 
 :Live Website:
-   https://msoe-vex.github.io/web-dashboard/www/
+   https://dashboard.msoevex.com
 
 .. toctree::
 

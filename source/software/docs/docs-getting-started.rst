@@ -76,7 +76,7 @@ Install sphinx using the command line:
 You can then activate the virtual environment using the command:
 .. code:: bash
 
-    venv/bin/activate
+    source venv/Scripts/activate
 
 Then run the following command to install the required packages.
 .. code:: bash
@@ -87,3 +87,5 @@ You can build using:
 .. code:: bash
 
     ./make.bat html
+
+Open the Build folder. Under HTML, find index.html. Right click and choose reveal in file explorer, then right click and open in a web browser of your choice.
