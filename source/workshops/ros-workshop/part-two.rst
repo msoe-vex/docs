@@ -3,7 +3,7 @@
 Part 2: Creating Nodes
 ======================
 
-Now that we have some experience with basic nodes, let's create our own. To start, open **Visual Studio Code** and open the "ros-workshop" folder located in your home directory.
+Now that we have some experience with basic nodes, let's create our own!
 
 One of the largest problems with ROS is it's complicated file structure. Packages often contain tons of pieces and configuration files, that allow everything to be linked in and created properly. In order to follow this pattern correctly, we are given multiple utilities to aid in the process.
 
@@ -16,9 +16,9 @@ Run the following commands to create your workspace:
 
 .. code:: bash
 
-    cd ~/ros-workshop
-    mkdir -p simple_node_ws
-    cd ./simple_node_ws
+    cd /ros-workshop
+    mkdir simple_node_ws
+    cd simple_node_ws
 
 We are now located in our workspace. From here, we can create our package with the following line:
 
@@ -171,7 +171,7 @@ Updating our package.xml
 
 Now that our files are created, we need to tell ROS what dependencies it needs to load when building and running our projects. For this, we use the `package.xml` file to create notes about these dependencies.
 
-Open the `package.xml` file in VSCode, and edit the following sections:
+Open the `package.xml` file in VS Code, and edit the following sections:
 
 :<description>:
 
@@ -264,8 +264,8 @@ Run the following commands:
 
 .. code:: bash
 
-    cd ~/ros-workshop/simple_node_ws
-    rosdep install -i --from-path py_pubsub --rosdistro foxy -y
+    cd /ros-workshop/simple_node_ws
+    rosdep install -i --from-path py_pubsub --rosdistro $ROS_DISTRO -y
 
 This will check to make sure all dependencies of our packages in the workspace are installed.
 
@@ -278,7 +278,7 @@ To test our ndoes, we need to build them first. Run the following commands to bu
 
 .. code:: bash
 
-    cd ~/ros-workshop/simple_node_ws
+    cd /ros-workshop/simple_node_ws
     colcon build --packages-select py_pubsub
 
 This command will use the files we created and build a ROS package with them. This adds in all of the ROS libraries that give us the ability to easily communicate between nodes, along with the remainder of the ROS library.
@@ -287,7 +287,7 @@ In order for our terminal to be properly setup with our package, we first need t
 
 .. code:: bash
 
-    cd ~/ros-workshop/simple_node_ws
+    cd /ros-workshop/simple_node_ws
     . install/setup.bash
 
 Finally, we can run our nodes with the `ros2 run` command. Use the following command to run our **publisher node**.

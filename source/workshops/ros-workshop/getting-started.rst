@@ -3,29 +3,40 @@
 Getting Started
 ===============
 
-To follow along with this workshop, you will want to download the *VirtualBox VM Instance* that has been developed for the workshop.
+To follow along with this workshop, you will want to download Visual Studio Code (VS Code) and  that has been developed for the workshop.
 
 
 Prerequisites
 -------------
 Before starting this guide, make sure you have the following things installed:
 
-:download:`VirtualBox <https://download.virtualbox.org/virtualbox/6.1.28/VirtualBox-6.1.28-147628-Win.exe>`
+:download:`VS Code <https://code.visualstudio.com/Download>`
 
-:download:`VirtualBox Extension Pack <https://download.virtualbox.org/virtualbox/6.1.28/Oracle_VM_VirtualBox_Extension_Pack-6.1.28.vbox-extpack>`
+:download:`Docker Desktop <https://www.docker.com/products/docker-desktop>`
 
-:download:`VirtualBox VM Instance <https://msoe.box.com/s/xr0wf981odr35rkyh0hgn1wgupkcvt5s>`
+:download:`WSL2 Kernel Update (if necessary) <https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi>`
 
-.. warning::
+Create A Folder
+---------------
+Create a folder titled *ros-workshop*, which will store the code for this workshop.
 
-    Make sure you install the items in the list from top to bottom! Each element depends on those above it - start with the VirtualBox installation, move to the Extension Pack, and finally install the VM Instance.
+Starting Our Terminal Windows for Docker
+----------------------------------------
+To start, open **Visual Studio Code** and open the "ros-workshop" folder you created.
+Next, Open the *ros-workshop* folder in VS Code, then select Terminal -> New Terminal.
+Finally, click the Split Terminal option twice, which will give you three terminal windows.
 
-Configuring the Virtual Machine
--------------------------------
+Starting and Entering our Docker Container
+------------------------------------------
+For the first terminal, start the container with:
 
-With VirtualBox open, go to `File` > `Import Appliance` to import the Virtual Machine instance we have created. Find the `.ova` file that was downloaded, and select it for the `File` box in the window.
+.. code:: powershell
 
-When you import the appliance, you can leave all of the settings as default (continue hitting "Next"), and then press "Import" to complete the process.
+    docker run -it -v ${PWD}:/ros-workshop --name ros-workshop ros:humble
+    
+For the other two, and for all subsequent containers, run:
 
-.. note::
-    The password to the VM is `rr2021`. The VM is configured to auto log-in once you open it up. However, if you need to install anything, the password will be required.
+.. code:: powershell
+
+    docker exec -it ros-workshop bash
+    source "/opt/ros/$ROS_DISTRO/setup.bash"
