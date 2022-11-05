@@ -195,15 +195,15 @@
             
   <div class="section" id="part-2-creating-nodes">
 <h1>Part 2: Creating Nodes<a class="headerlink" href="#part-2-creating-nodes" title="Permalink to this headline">¶</a></h1>
-<p>Now that we have some experience with basic nodes, let’s create our own. To start, open <strong>Visual Studio Code</strong> and open the “ros-workshop” folder located in your home directory.</p>
+<p>Now that we have some experience with basic nodes, let’s create our own!</p>
 <p>One of the largest problems with ROS is it’s complicated file structure. Packages often contain tons of pieces and configuration files, that allow everything to be linked in and created properly. In order to follow this pattern correctly, we are given multiple utilities to aid in the process.</p>
 <div class="section" id="creating-a-ros-package">
 <h2>Creating a ROS Package<a class="headerlink" href="#creating-a-ros-package" title="Permalink to this headline">¶</a></h2>
 <p>To create a package, we first want to be in a <strong>workspace</strong>. A workspace is just a folder dedicated to holding multiple ROS packages, and should be a separate folder. This allows for certain commands such as <em>rosdep</em> to be defined and run from a specified location.</p>
 <p>Run the following commands to create your workspace:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop
-mkdir -p simple_node_ws
-<span class="nb">cd</span> ./simple_node_ws
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /ros-workshop
+mkdir simple_node_ws
+<span class="nb">cd</span> simple_node_ws
 </pre></div>
 </div>
 <p>We are now located in our workspace. From here, we can create our package with the following line:</p>
@@ -343,7 +343,7 @@ mkdir -p simple_node_ws
 <div class="section" id="updating-our-package-xml">
 <h2>Updating our package.xml<a class="headerlink" href="#updating-our-package-xml" title="Permalink to this headline">¶</a></h2>
 <p>Now that our files are created, we need to tell ROS what dependencies it needs to load when building and running our projects. For this, we use the <cite>package.xml</cite> file to create notes about these dependencies.</p>
-<p>Open the <cite>package.xml</cite> file in VSCode, and edit the following sections:</p>
+<p>Open the <cite>package.xml</cite> file in VS Code, and edit the following sections:</p>
 <dl class="field-list simple">
 <dt class="field-odd">&lt;description&gt;</dt>
 <dd class="field-odd"><p>Add a description for your package</p>
@@ -408,8 +408,8 @@ mkdir -p simple_node_ws
 <h2>Updating Dependencies<a class="headerlink" href="#updating-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>Right before we start, we want to update the dependencies of our project. This can be done with the <cite>rosdep</cite> command.</p>
 <p>Run the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
-rosdep install -i --from-path py_pubsub --rosdistro foxy -y
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /ros-workshop/simple_node_ws
+rosdep install -i --from-path py_pubsub --rosdistro <span class="nv">$ROS_DISTRO</span> -y
 </pre></div>
 </div>
 <p>This will check to make sure all dependencies of our packages in the workspace are installed.</p>
@@ -418,13 +418,13 @@ rosdep install -i --from-path py_pubsub --rosdistro foxy -y
 <div class="section" id="testing-our-nodes">
 <h2>Testing Our Nodes<a class="headerlink" href="#testing-our-nodes" title="Permalink to this headline">¶</a></h2>
 <p>To test our ndoes, we need to build them first. Run the following commands to build our package:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /ros-workshop/simple_node_ws
 colcon build --packages-select py_pubsub
 </pre></div>
 </div>
 <p>This command will use the files we created and build a ROS package with them. This adds in all of the ROS libraries that give us the ability to easily communicate between nodes, along with the remainder of the ROS library.</p>
 <p>In order for our terminal to be properly setup with our package, we first need to <strong>source our setup files</strong>. This connects our terminals with all of the libraries and additional components needed by our package to make it run properly. This can be done by running the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros-workshop/simple_node_ws
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /ros-workshop/simple_node_ws
 . install/setup.bash
 </pre></div>
 </div>

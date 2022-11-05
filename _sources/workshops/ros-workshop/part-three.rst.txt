@@ -3,6 +3,34 @@
 Part 3: Simulation
 ==================
 
+Docker Setup
+------------
+Because we are in a Docker container on Windows, there are a few hoops we need to jump through in order to launch our simulation programs.
+
+First, install VcXsrv:
+ 
+:download:`VcXsrv <https://sourceforge.net/projects/vcxsrv/files/latest/download>`
+
+Just click next through the prompts to install VcXsrv, though if Windows gives you a prompt about allowing network access, make sure to select **Domain, Private, and Public**.
+
+A new icon should appear on the desktop titled `XLaunch`. Double click that and click next and finish through all the prompts.
+
+In a Docker terminal, run:
+
+.. code:: bash
+
+    apt install ros-humble-turtlebot3-{gazebo,teleop}
+
+In **each** Docker terminal, run:
+
+.. code:: bash
+
+    export DISPLAY=host.docker.internal:0 LIBGL_ALWAYS_INDIRECT=1
+
+This will allow our Docker container to connect to VcXsrv in Windows.
+
+You are now ready to start simulating a robot!
+
 2D Simulation
 -------------
 
@@ -39,7 +67,7 @@ Let's open one of the tutorial worlds provided to us in Gazebo. To do so, run th
 
 .. code:: bash
 
-    gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+    gazebo --verbose /opt/ros/humble/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
 
 Opening this up, we should see the Gazebo environment load in with a simple test robot. Explore some of the tools in the environment, and look around.
 
@@ -47,7 +75,7 @@ Since we know where the "world" file is that it's loading, let's take a look at 
 
 .. code:: bash
 
-    gedit /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+    cat /opt/ros/humble/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
 
 Looking around, everything is all defined in XML format. The entire robot and the surrounding world are all defined within this file, along with all the rigging to make the robot move. Astute observers may also notice the commands located at the top of the file. Let's try running one of them to control the robot.
 
@@ -59,26 +87,11 @@ In a third unusued terminal, run the following command:
 
 
 
-Building turtlebot3
+Running turtlebot3
 -------------------
 
-Turtlebot3 is an introductory program used to teach people how to work with some of the ROS simulation software. We have included the Gazebo code for this section. However, you still need to build it on your machine.
-
-Similarly to past sections, run the following commands to enter the Gazebo workspace and build the package:
-
-.. code:: bash
-
-    cd ~/ros-workshop/gazebo_ws
-    colcon build --symlink-install
-
-This will start building the Gazebo project for us to run simulations. Once complete, we need to run the following commands to run the final setup, same as in the previous step:
-
-.. code:: bash
-
-    cd ~/ros-workshop/gazebo_ws
-    . install/setup.bash
-
-Once we get this run, it's time to open Gazebo. This may take some time, and can be started with the following command:
+Turtlebot3 is an introductory program used to teach people how to work with some of the ROS simulation software.
+To start Turtlebot3 in Gazebo, run:
 
 .. code:: bash
 

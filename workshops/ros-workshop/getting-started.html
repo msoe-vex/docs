@@ -104,7 +104,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="ros-workshop.html">ROS Workshop</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configuring-the-virtual-machine">Configuring the Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-folder">Create A Folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-our-terminal-windows-for-docker">Starting Our Terminal Windows for Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-and-entering-our-docker-container">Starting and Entering our Docker Container</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="part-one.html">Part 1: Using Nodes</a></li>
@@ -189,25 +191,34 @@
             
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p>To follow along with this workshop, you will want to download the <em>VirtualBox VM Instance</em> that has been developed for the workshop.</p>
+<p>To follow along with this workshop, you will want to download Visual Studio Code (VS Code) and  that has been developed for the workshop.</p>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>Before starting this guide, make sure you have the following things installed:</p>
-<p><a class="reference download external" download="" href="https://download.virtualbox.org/virtualbox/6.1.28/VirtualBox-6.1.28-147628-Win.exe"><code class="xref download docutils literal notranslate"><span class="pre">VirtualBox</span></code></a></p>
-<p><a class="reference download external" download="" href="https://download.virtualbox.org/virtualbox/6.1.28/Oracle_VM_VirtualBox_Extension_Pack-6.1.28.vbox-extpack"><code class="xref download docutils literal notranslate"><span class="pre">VirtualBox</span> <span class="pre">Extension</span> <span class="pre">Pack</span></code></a></p>
-<p><a class="reference download external" download="" href="https://msoe.box.com/s/xr0wf981odr35rkyh0hgn1wgupkcvt5s"><code class="xref download docutils literal notranslate"><span class="pre">VirtualBox</span> <span class="pre">VM</span> <span class="pre">Instance</span></code></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Make sure you install the items in the list from top to bottom! Each element depends on those above it - start with the VirtualBox installation, move to the Extension Pack, and finally install the VM Instance.</p>
+<p><a class="reference download external" download="" href="https://code.visualstudio.com/Download"><code class="xref download docutils literal notranslate"><span class="pre">VS</span> <span class="pre">Code</span></code></a></p>
+<p><a class="reference download external" download="" href="https://www.docker.com/products/docker-desktop"><code class="xref download docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">Desktop</span></code></a></p>
+<p><a class="reference download external" download="" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"><code class="xref download docutils literal notranslate"><span class="pre">WSL2</span> <span class="pre">Kernel</span> <span class="pre">Update</span> <span class="pre">(if</span> <span class="pre">necessary)</span></code></a></p>
 </div>
+<div class="section" id="create-a-folder">
+<h2>Create A Folder<a class="headerlink" href="#create-a-folder" title="Permalink to this headline">¶</a></h2>
+<p>Create a folder titled <em>ros-workshop</em>, which will store the code for this workshop.</p>
 </div>
-<div class="section" id="configuring-the-virtual-machine">
-<h2>Configuring the Virtual Machine<a class="headerlink" href="#configuring-the-virtual-machine" title="Permalink to this headline">¶</a></h2>
-<p>With VirtualBox open, go to <cite>File</cite> &gt; <cite>Import Appliance</cite> to import the Virtual Machine instance we have created. Find the <cite>.ova</cite> file that was downloaded, and select it for the <cite>File</cite> box in the window.</p>
-<p>When you import the appliance, you can leave all of the settings as default (continue hitting “Next”), and then press “Import” to complete the process.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The password to the VM is <cite>rr2021</cite>. The VM is configured to auto log-in once you open it up. However, if you need to install anything, the password will be required.</p>
+<div class="section" id="starting-our-terminal-windows-for-docker">
+<h2>Starting Our Terminal Windows for Docker<a class="headerlink" href="#starting-our-terminal-windows-for-docker" title="Permalink to this headline">¶</a></h2>
+<p>To start, open <strong>Visual Studio Code</strong> and open the “ros-workshop” folder you created.
+Next, Open the <em>ros-workshop</em> folder in VS Code, then select Terminal -&gt; New Terminal.
+Finally, click the Split Terminal option twice, which will give you three terminal windows.</p>
+</div>
+<div class="section" id="starting-and-entering-our-docker-container">
+<h2>Starting and Entering our Docker Container<a class="headerlink" href="#starting-and-entering-our-docker-container" title="Permalink to this headline">¶</a></h2>
+<p>For the first terminal, start the container with:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">-it</span> <span class="n">-v</span> <span class="p">${</span><span class="n">PWD</span><span class="p">}:/</span><span class="n">ros-workshop</span> <span class="p">-</span><span class="n">-name</span> <span class="n">ros-workshop</span> <span class="n">ros</span><span class="p">:</span><span class="n">humble</span>
+</pre></div>
+</div>
+<p>For the other two, and for all subsequent containers, run:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">ros-workshop</span> <span class="n">bash</span>
+<span class="n">source</span> <span class="s2">&quot;/opt/ros/$ROS_DISTRO/setup.bash&quot;</span>
+</pre></div>
 </div>
 </div>
 </div>

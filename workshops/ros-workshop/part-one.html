@@ -186,8 +186,12 @@
   <div class="section" id="part-1-using-nodes">
 <h1>Part 1: Using Nodes<a class="headerlink" href="#part-1-using-nodes" title="Permalink to this headline">¶</a></h1>
 <p>Nodes are essential to the ROS ecosystem. Used as the primary building blocks of the architecture, we can add nodes in to encompass anything we need. Before we get to building them, let’s first see how they work.</p>
-<p>For the first experiment, open <strong>3 terminal windows</strong>, and space them out on your Linux desktop.</p>
-<p>In the first one, run the following command:</p>
+<p>Before we can begin though, we need to install the nodes we will be using by running the following commands in one of your temrinals:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt update
+apt install ros-humble-demo-nodes-<span class="o">{</span>cpp,py<span class="o">}</span>
+</pre></div>
+</div>
+<p>In the first terminal, run the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
